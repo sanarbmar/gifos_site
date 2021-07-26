@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+    margin: auto;
+    //border: 4px solid black;
+   
+}
+
+@import "header.scss";
+@import "section_main.scss";
+@import "footer.scss";
+@import "media-queries.scss";

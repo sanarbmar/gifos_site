@@ -1,0 +1,289 @@
+.menu {
+  display: none;
+}
+
+.burger-menu {
+  margin: 3px 40px 0 80px;
+}
+
+.burger-menu .menu-check {
+  display: none;
+}
+
+.burger-menu .menu-open {
+  padding: 30px 40px;
+  border-radius: 100%;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.burger-menu .menu-open span {
+  width: 40px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1.5px;
+  margin-left: -20px;
+  background-color: rgba(87, 46, 229, 0.9);
+  font-weight: bold;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.burger-menu .menu-open span.burger1 {
+  -webkit-transform: translate3d(0px, -10px, 0px);
+          transform: translate3d(0px, -10px, 0px);
+}
+
+.burger-menu .menu-open span.burger2 {
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.burger-menu .menu-open span.burger3 {
+  -webkit-transform: translate3d(0px, 10px, 0px);
+          transform: translate3d(0px, 10px, 0px);
+}
+
+.burger-menu .menu-check:checked + .menu-open span {
+  background-color: rgba(87, 46, 229, 0.9);
+}
+
+.burger-menu .menu-check:checked + .menu-open span.burger1 {
+  -webkit-transform: translateY(-1px) rotate(45deg);
+          transform: translateY(-1px) rotate(45deg);
+  width: 30px;
+}
+
+.burger-menu .menu-check:checked + .menu-open span.burger2 {
+  opacity: 0;
+}
+
+.burger-menu .menu-check:checked + .menu-open span.burger3 {
+  -webkit-transform: translateY(0px) rotate(-48deg);
+          transform: translateY(0px) rotate(-48deg);
+  width: 30px;
+}
+
+.burger-menu .menu-options {
+  background-color: rgba(87, 46, 229, 0.9);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 0;
+  top: 16%;
+  left: 0;
+  height: 30%;
+  padding: 100px 0px 50px;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.burger-menu .menu-options li {
+  color: #fff;
+  text-align: center;
+  list-style: none;
+  display: block;
+  font-weight: normal;
+}
+
+.burger-menu .menu-options li a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 4em;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.burger-menu .menu-options li a:hover {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-color: #00F3BB;
+          text-decoration-color: #00F3BB;
+}
+
+.burger-menu .menu-check:checked ~ .menu-options {
+  width: 100%;
+  opacity: 1;
+}
+
+.header-flex {
+  width: 100%;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 5px solid #572EE5;
+}
+
+.burguer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+ul li {
+  list-style: none;
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+  font-family: Montserrat-Bold,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  color: #572EE5;
+  letter-spacing: 0;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+#logo_dk {
+  margin-right: 30%;
+  margin-top: 0.8%;
+  margin-left: 10.8%;
+}
+
+#logo_dk img {
+  width: 100%;
+  height: auto;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+.crearg {
+  margin: 1.5% 10.8% 1.2% 4.1%;
+}
+
+a:hover {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-color: #00F3BB;
+          text-decoration-color: #00F3BB;
+}
+
+#crear-gifo-hover {
+  display: none;
+}
+
+.crearg:hover #crear-gifo-hover {
+  display: block;
+}
+
+.crearg:hover #crear-gifo {
+  display: none;
+}
+
+/*.linea-azul{
+    height: 5px;
+    background-color: #572EE5 ;
+}
+.header-flex{
+    //border: 2px solid blue;
+    display: flex;
+    justify-content: space-evenly;
+    
+
+}
+#nav{
+    //border: 2px solid black;
+    width: 29%;
+    margin-left: 40.4%;
+}
+.nav-mobile{
+    display: none;
+}
+#logo_dk{
+    margin-top: 1.5%;
+    margin-top: 0.8%;
+    margin-left: 10.8%;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+.nav-div{
+    //border: 2px solid black;
+    display: inline-block;
+    margin:0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+    text-decoration: none;
+    font-family: Montserrat-Bold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+
+    .navli-1{
+        display: inline-block;
+        margin-right: 3%;
+        margin-top: 9.7%;
+    }
+    .navli-2{
+        display: inline-block;
+        margin-right: 3.5%;
+        margin-top: 2.7%;
+       
+    }
+    .navli-3{
+        display: inline-block;
+        margin-right: 3.7%;
+        margin-top: 2.7%;
+       
+    }
+    a{
+        text-decoration: none;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #572EE5 ;
+    }
+   
+   
+   
+}
+#crear-gifo{
+    display: inline-block;
+    margin-right: 10.8%;
+    margin-top: 1.5%;
+}*/
+/*# sourceMappingURL=header.css.map */

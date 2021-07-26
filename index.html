@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <!--links -->
+    <!--css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/section_main.css">
+    <link rel="stylesheet" href="css/section_slider.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <!--Fonts-->
+    <link rel="stylesheet" href="fonts/open_sans/OpenSans-bold.woff">
+    <link rel="stylesheet" href="fonts/open_sans/OpenSans-light.woff">
+    <link rel="stylesheet" href="fonts/open_sans/OpenSans-semibold.woff">
+    <link rel="stylesheet" href="fonts/open_sans/OpenSans.woff">
+    <!--logo del title-->
+    <link rel="icon" type="image/svg" href="img/logo-desktop.svg">
+</head>
+
+<body>
+    <!--termino en elslider->
+    <!-- start header -->
+    <!--<div class="linea-azul"></div>-->
+    <header class="header-flex">
+        <div id="logo_dk">
+            <img src="img/logo-desktop.svg" alt="logo" class="logo-desktop">
+            <img src="img/logo-mobile.svg" alt="logo" class="logo-mobile">
+        </div>
+        <nav class="burguer">
+            <ul class="nav-desktop">
+                <li class="navli-1">
+                    <a href="">MODO NOCTURNO</a>
+                    <span class="linea"></span>
+                </li>
+                <li class="navli-2">
+                    <a href="">FAVORITOS</a>
+                    <span class="linea"></span>
+                </li>
+                <li class="navli-3">
+                    <a href="">MIS GIFOS</a>
+                    <span class="linea"></span>
+                </li>
+
+            </ul>
+
+        </nav>
+        <div class="crearg">
+            <img src="img/button-crear-gifo.svg" alt="Crear gifo" id="crear-gifo">
+            <img src="img/CTA-crear-gifo-hover.svg" alt="Crear gifo" id="crear-gifo-hover">
+
+        </div>
+
+
+        <div class="menu" id="bdy">
+
+            <nav class="burger-menu">
+                <input class="menu-check" type="checkbox" name="menu-check" value="" id="menu-check">
+                <label class="menu-open" for="menu-check">
+                    <span class="burger1"></span>
+                    <span class="burger2"></span>
+                    <span class="burger3"></span>
+                </label>
+
+                <ul class="menu-options">
+
+                    <li><a href="#">MODO NOCTURNO</a></li>
+                    <li><a href="#">FAVORITOS</a></li>
+                    <li><a href="#">MIS GIFOS</a></li>
+
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+    <!--finish header -->
+    <!-- Section Main contains : 1 div emboltura (flex),5 divs childs -->
+    <section class="main">
+        <div class="emboltura">
+            <div class="em-1">
+                <span>Inspirate,</span><span>busca,</span><span>guarda y crea</span> <br> <span> los mejores
+                </span><span class="verde">GIFOS</span></span>
+                <!--inspirate,busca,crea.....-->
+            </div>
+            <div class="em-2">
+                <img src="img/ilustra_header.svg" alt="saludo">
+            </div>
+            <div class="em-3">
+                <input placeholder="           Busca GIFOS y Más" type="text" name="search" id="searchInput">
+                <img src="img/icon-search.svg" alt="search" id="lupa">
+
+
+            </div>
+            <div class="em-4">
+                <h1>Trending:</h1>
+            </div>
+            <div class="em-5">
+                <span id="word"></span>
+            </div>
+            <div id="line"></div>
+
+            <div id="palabra">
+                MASCOTAS
+            </div>
+
+            <div id="resultados">
+                <!-- <div id="change"></div> -->
+
+                <!-- <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div>
+
+                <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div>
+
+                <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div>
+
+                <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div>
+
+                <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div>
+
+                <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div>
+
+                <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div>
+
+                <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div>
+
+                <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div>
+
+                <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div>
+
+                <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div>
+
+                <div id="card">
+                    <img src="img/placeh.png" frameborder="0" id="iframe">
+                </div> -->
+
+            </div>
+
+            <div id="verMas">
+                <img src="img/CTA-ver-mas.svg" alt="ver Mas">
+            </div>
+
+        </div>
+
+    </section>
+    <!--finish section main-->
+    <!-- Section Slider  -->
+    <section class="slider">
+        <div class="sd-1">
+            Trending GIFOS
+        </div>
+        <div class="sd-2">
+            Mira los ultimos GIFO de nuestra comunidad.
+        </div>
+        <div class="carrousel">
+            <div class="c-1">
+                <img src="img/button-slider-left.svg" alt="anterior">
+            </div>
+            <div class="c-2">
+                <div class="emblotura-c2">
+                    <div id="iconos-up">
+                        
+                        <button id="gifo-like"><img src="img/icon-fav.svg" alt="me gusta" id="like"></button>
+                    </div>
+                    <div id="iconos-up">  
+                        <button id="gifo-download"><img src="img/icon-download.svg" alt="descargar"></button>
+                    </div>
+                    <div id="iconos-up">
+                        <button id="gifo-max"><img src="img/icon-max-normal.svg" alt="maximizar"></button>
+                    </div>
+                </div>
+                <div id="user">
+                    <h1 id="user-title">User</h1>
+                </div>
+                <div id="titulo-gifo">
+                    <h1 id="titulo">titulo GIFO</h1>
+                </div>
+                <img src="img/placeh.png" alt="" id="gifo-slider">
+            </div>
+            <!-- <div class="c-2">
+                <div class="emblotura-c2">
+                    <div id="iconos-up">
+                        <img src="img/icon-fav.svg" alt="me gusta" id="like">
+                    </div>
+                    <div id="iconos-up">
+                        <img src="img/icon-download.svg" alt="descargar">
+                    </div>
+                    <div id="iconos-up">
+                        <img src="img/icon-max-normal.svg" alt="maximizar">
+                    </div>
+                </div>
+                <div id="user">
+                    <h1 id="user-title">User</h1>
+                </div>
+                <div id="titulo-gifo">
+                    <h1 id="titulo">titulo GIFO</h1>
+                </div>
+                <img src="img/placeh.png" alt="" id="gifo-slider">
+            </div>
+            <div class="c-2">
+                <div class="emblotura-c2">
+                    <div id="iconos-up">
+                        <img src="img/icon-fav.svg" alt="me gusta" id="like">
+                    </div>
+                    <div id="iconos-up">
+                        <img src="img/icon-download.svg" alt="descargar">
+                    </div>
+                    <div id="iconos-up">
+                        <img src="img/icon-max-normal.svg" alt="maximizar">
+                    </div>
+                </div>
+                <div id="user">
+                    <h1 id="user-title">User</h1>
+                </div>
+                <div id="titulo-gifo">
+                    <h1 id="titulo">titulo GIFO</h1>
+                </div>
+                <img src="img/placeh.png" alt="" id="gifo-slider">
+            </div> -->
+            <div class="c-3">
+                <img src="img/Button-Slider-right.svg" alt="siguiente">
+            </div>
+        </div>
+    </section>
+    <!--finish section slider-->
+    <!--Footer -->
+    <footer>
+        <div class="redes">
+            <div class="rd-1">
+                <h1>compartir en : </h1>
+            </div>
+            <div class="rd-2">
+                <img src="img/icon_facebook.svg" alt="facebook">
+            </div>
+            <div class="rd-3">
+                <img src="img/icon-twitter.svg" alt="twitter">
+            </div>
+            <div class="rd-4">
+                <img src="img/icon_instagram.svg" alt="instagram">
+            </div>
+        </div>
+        <div class="allR">
+            <p><i class="far fa-copyright"></i> GIFOS 2021 All Rigths Reserverd</p>
+        </div>
+    </footer>
+    <!--Scripts -->
+    <script src="js/trending.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/slider.js"></script>
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/7864fe4603.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
