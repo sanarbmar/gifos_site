@@ -1,0 +1,73 @@
+.wrapper{
+    width: 551px;
+    margin:  auto;
+    border: 1px solid #572EE5;
+    border-radius: 27px;
+    margin-bottom: 4.8%;
+    .search-input{
+        position: relative;
+        background: #fff;
+        width: 100%;
+        border-radius: 27px;
+        
+        box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+    }
+
+}
+
+.search-input input{
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 27px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);//linea despues de busqueda
+}
+
+.search-input .icon{
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 20px;
+    color: #644bff;
+    cursor: pointer;
+}
+.search-input .autocom-box{
+    padding: 0px;
+    max-height: 280px;
+    overflow-y: auto;
+    opacity:0;
+    pointer-events: none;//buscar
+}
+
+.search-input.active .autocom-box{
+    padding: 10px 8px;
+    opacity:1;
+    pointer-events: auto;//buscar
+}
+
+.autocom-box li{
+    list-style: none;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: default;
+    border-radius:3px ;
+    display: none;
+}
+
+.search-input.active .autocom-box  li{
+    display: block;
+}
+
+.autocom-box li:hover{
+    background: #efefef;
+}
+.envol{
+    border: 1px solid red;
+}

@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     
@@ -13,3 +14,4 @@ body{
 @import "section_main.scss";
 @import "footer.scss";
 @import "media-queries.scss";
+@import "search.scss";

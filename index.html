@@ -10,10 +10,12 @@
     <!--css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/section_main.css">
+
     <link rel="stylesheet" href="css/section_slider.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/section_main.css">
+    <link rel="stylesheet" href="css/search.css">
     <!--Fonts-->
     <link rel="stylesheet" href="fonts/open_sans/OpenSans-bold.woff">
     <link rel="stylesheet" href="fonts/open_sans/OpenSans-light.woff">
@@ -92,28 +94,42 @@
             <div class="em-2">
                 <img src="img/ilustra_header.svg" alt="saludo">
             </div>
-            <div class="em-3">
-                <input placeholder="           Busca GIFOS y Más" type="text" name="search" id="searchInput">
-                <img src="img/icon-search.svg" alt="search" id="lupa">
+        </div>
+    </section>
+    <!-- <input placeholder="           Busca GIFOS y Más" type="text" name="search" id="searchInput">
+                <img src="img/icon-search.svg" alt="search" id="lupa"> -->
 
-
+    <div class="wrapper">
+        <div class="search-input">
+            <input type="text" placeholder="           Busca GIFOS y Más" name="" id="">
+            <div class="autocom-box">
+                <li>how to learn HTML & css</li>
+                <li>how build From in HTML & css</li>
+                <li>how to learn javascript</li>
+                <li>how became freelancer</li>
+                <li>login From in HTML & css</li>
             </div>
-            <div class="em-4">
-                <h1>Trending:</h1>
-            </div>
-            <div class="em-5">
-                <span id="word"></span>
-            </div>
-            <div id="line"></div>
+            <div class="icon"><i class="fas fa-search"></i></div>
+        </div>
 
-            <div id="palabra">
-                MASCOTAS
-            </div>
+    </div>
 
-            <div id="resultados">
-                <!-- <div id="change"></div> -->
+    <div class="em-4">
+        <h1>Trending:</h1>
+    </div>
+    <div class="em-5">
+        <span id="word"></span>
+    </div>
+    <div id="line"></div>
 
-                <!-- <div id="card">
+    <div id="palabra">
+        MASCOTAS
+    </div>
+
+    <div id="resultados">
+        <!-- <div id="change"></div> -->
+
+        <!-- <div id="card">
                     <img src="img/placeh.png" frameborder="0" id="iframe">
                 </div>
 
@@ -161,15 +177,15 @@
                     <img src="img/placeh.png" frameborder="0" id="iframe">
                 </div> -->
 
-            </div>
+    </div>
 
-            <div id="verMas">
-                <img src="img/CTA-ver-mas.svg" alt="ver Mas">
-            </div>
+    <div id="verMas">
+        <img src="img/CTA-ver-mas.svg" alt="ver Mas">
+    </div>
 
-        </div>
 
-    </section>
+
+
     <!--finish section main-->
     <!-- Section Slider  -->
     <section class="slider">
@@ -186,10 +202,10 @@
             <div class="c-2">
                 <div class="emblotura-c2">
                     <div id="iconos-up">
-                        
+
                         <button id="gifo-like"><img src="img/icon-fav.svg" alt="me gusta" id="like"></button>
                     </div>
-                    <div id="iconos-up">  
+                    <div id="iconos-up">
                         <button id="gifo-download"><img src="img/icon-download.svg" alt="descargar"></button>
                     </div>
                     <div id="iconos-up">
@@ -204,7 +220,7 @@
                 </div>
                 <img src="img/placeh.png" alt="" id="gifo-slider">
             </div>
-            <!-- <div class="c-2">
+            <div class="c-2">
                 <div class="emblotura-c2">
                     <div id="iconos-up">
                         <img src="img/icon-fav.svg" alt="me gusta" id="like">
@@ -243,7 +259,7 @@
                     <h1 id="titulo">titulo GIFO</h1>
                 </div>
                 <img src="img/placeh.png" alt="" id="gifo-slider">
-            </div> -->
+            </div>
             <div class="c-3">
                 <img src="img/Button-Slider-right.svg" alt="siguiente">
             </div>
@@ -272,8 +288,9 @@
     </footer>
     <!--Scripts -->
     <script src="js/trending.js"></script>
-    <script src="js/search.js"></script>
+
     <script src="js/slider.js"></script>
+    <script src="js/search.js"></script>
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/7864fe4603.js" crossorigin="anonymous"></script>
 </body>

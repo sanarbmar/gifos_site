@@ -56,26 +56,6 @@
   margin-bottom: 4.8%;
 }
 
-.em-3 #searchInput {
-  background: #FFFFFF;
-  border: 1px solid #572EE5;
-  border-radius: 27px;
-  border-radius: 27px;
-  width: 100%;
-  padding: 3%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.em-3 #lupa {
-  position: absolute;
-  left: 95%;
-  bottom: 30%;
-}
-
 #br-mov {
   display: none;
 }
@@ -181,4 +161,6 @@
   width: 100%;
   height: auto;
 }
+
+/*qudo armando la barrabde busqueda bien mela*/
 /*# sourceMappingURL=section_main.css.map */

@@ -1,91 +1,72 @@
-const apikeySearch = "https://api.giphy.com/v1/gifs/search?api_key=cAvuB99zo3RklJTjZSYGgx2ERWNnpzSP&limit=12&offset=0&rating=g&lang=en&q=";
+const searchWrapper = document.querySelector(".search-input");
+const inputBox = document.querySelector("input");
+const suggBox = document.querySelector(".autocom-box");
+let searchUrl = "https://api.giphy.com/v1/gifs/search?api_key=bYQ1Vfn6G2NKpWha0cAgVmdsArrnZiSz&limit=12&offset=0&rating=g&lang=en&q=";
 
-let resultados = document.getElementById("resultados");
+// if user press any key and release
+inputBox.onkeyup = (e) => {
+    let userData = e.target.value;//user entred data
+    let emptyArray = [];
+    let searchSuggestions = [];
+    let url = searchUrl+userData;
+    console.log(url);
+    async function getFrames() {
+        let response = await fetch(url);
+        let responseJson = await response.json();
+        let data = responseJson.data;
 
-let searchInput = document.getElementById("searchInput");
+        data.forEach(e => {
 
-let line = document.getElementById("line");
+            searchSuggestions.push(e.title)
+        });
+        console.log(searchSuggestions);
+        //return searchSuggestions;
 
-let palabra = document.getElementById("palabra");
-
-let verMas = document.getElementById("verMas");
-
-let trending = document.querySelector(".em-4");
-let wr = document.getElementById("word");
-
-/**En esta funcion dibujo las cards de los resultados del search */
-
-function drawResultSearch(src) {
-
-    let add =
-        `
+        if (userData) {
+            emptyArray = searchSuggestions.filter((data) => {
+                //filtering array value and user char to lowercase and return only those word sentc which are stars with user entered  word
+                return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+                //console.log(emptyArray);
+            });
+            emptyArray = emptyArray.map((data) => {
+                return data = `<li>${data}</li>`;
+            });
+            console.log(emptyArray);
+            searchWrapper.classList.add("active");//show autocomplete div
+            showSuggestions(emptyArray);
+            let allList = suggBox.querySelectorAll("li");
+            for (let i = 0; i < allList.length; i++) {
+                //ADDING ONCLICK ATTRIBUTE  IN ALL LI TAG 
+                allList[i].setAttribute("onclick", "select(this)");
     
-        <div id="card">
-            <img src="${src}" frameborder="0" id="iframe">
-        </div>
-  
-    `
-    resultados.innerHTML += add;
-
-    line.style.display = "block";
-
+            }
+        } else {
+            searchWrapper.classList.remove("active");//hide autocomplete div
+        }
+    }
    
-    verMas.style.display = "block";
+    getFrames();
     
 
-};
 
-/**Para hacer la llamada fetch utilizo una fincion asincronica la cual va a dibujar la grila con las cards */
-
-async function getIframe(url) {
-    let response = await fetch(url);
-    let responseJSON = await response.json();
-    let dat = responseJSON.data;
-    console.log(dat);
-   /*  for (let i = 0; i < 12; i++) {
-        console.log(responseJSON.data[i].images.original.url);
-        drawResultSearch(responseJSON.data[i].images.original.url)
-    } */
-    dat.forEach(element => {
-
-        drawResultSearch(element.images.downsized_large.url);
-        
-
-        //console.log(element.images.original.url);
-        //console.log(dat);
-        
-        
-    });
-
-    /*  drawResultSearch(responseJSON.data[0].embed_url); */
-
+    /* console.log(e.target.value); */
 }
 
+function select(element) {
+    let selectUserData = element.textContent;
+    inputBox.value = selectUserData;//passing the user selected list data in textfield
+    searchWrapper.classList.remove("active");
+    console.log(selectUserData);//el que escoje
+}
 
-searchInput.addEventListener("keyup", e => {
-    
-   
-    if (searchInput.value.length >= 4) {
-        url = apikeySearch + searchInput.value;
-        getIframe(url);
-    };
-    if(searchInput.value.length == 0){
-        line.style.display = "none";
-        
-        resultados.style.display = "none";
-    }else{
-        trending.style.display ="none";
-    };
-
-    if(searchInput.value.length == 0){
-        verMas.style.display = "none";
-        
-    }else{
-        wr.style.display ="none"
+function showSuggestions(list) {
+    let listData;
+    if (!list.length) {
+        userValue = inputBox.value;
+        listData = `<li>${userValue}</li>`;
+    } else {
+        listData = list.join('');
     }
-    palabra.innerHTML = searchInput.value;
-    palabra.style.display = "block";
-    
-    
+    suggBox.innerHTML = listData;
+}
 
-});
