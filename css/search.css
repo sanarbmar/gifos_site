@@ -63,6 +63,20 @@
   display: none;
 }
 
+#closeButton {
+  display: none;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
+}
+
 .search-input.active .autocom-box li {
   display: block;
 }
@@ -73,5 +87,19 @@
 
 .envol {
   border: 1px solid red;
+}
+
+#searchButton::after {
+  display: none;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
 }
 /*# sourceMappingURL=search.css.map */
