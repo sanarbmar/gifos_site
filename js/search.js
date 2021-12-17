@@ -2,11 +2,13 @@
 const searchWrapper = document.querySelector(".search-input");
 const inputBox = document.querySelector("#search-input");
 const suggBox = document.querySelector(".autocom-box");
-const resultados = document.getElementById("resultados");
+const resultado_search = document.querySelector(".resultado_search");
 const searchButton = document.getElementById("searchButton");
 const closeButton = document.getElementById("closeButton");
+const lupaHidden = document.getElementById("lupa-hidden");
 const userTitle = document.getElementById("user-title");
-let searchUrl = "https://api.giphy.com/v1/gifs/search?api_key=bYQ1Vfn6G2NKpWha0cAgVmdsArrnZiSz&limit=12&offset=0&rating=g&lang=en&q=";
+const verplus = document.getElementById("verplus");
+let searchUrl = "https://api.giphy.com/v1/gifs/search?api_key=bYQ1Vfn6G2NKpWha0cAgVmdsArrnZiSz&limit=48&offset=0&rating=g&lang=en&q=";
 
 async function getTitles(e) {
     let userData = e.target.value;//datos ingresados por el usuario
@@ -17,7 +19,7 @@ async function getTitles(e) {
     let response = await fetch(url);
     let responseJson = await response.json();
     let data = responseJson.data;
-
+    userData.innerHTML += `<img src="img/icon-search.svg" alt="lupa" class="imagen-lupa">`
     data.forEach(e => {
 
         searchSuggestions.push(e.title)
@@ -35,7 +37,7 @@ async function getTitles(e) {
             //console.log(emptyArray);
         });
         emptyArray = emptyArray.map((data) => {
-            return data = `<li>${data}</li>`;
+            return data = `<li><i class="fas fa-search" id="imagen-lupa-2"></i>${data}</li>`;
         });
         //console.log(emptyArray);
         searchWrapper.classList.add("active");//mostrar div de autocompletar
@@ -43,6 +45,7 @@ async function getTitles(e) {
         let allList = suggBox.querySelectorAll("li");
         for (let i = 0; i < allList.length; i++) {
             //AÑADIR UN ATRIBUTO DE ONCLICK EN TODAS LAS  LI
+            allList[i].setAttribute("class", "lupa");
             allList[i].setAttribute("onclick", "select(this)");
 
         }
@@ -54,33 +57,42 @@ async function getTitles(e) {
 async function getGifs() {
     let userData = inputBox.value;//datos ingresados por el usuario
     let searchSuggestions = [];
-    let usersName = []
     let url = searchUrl + userData;
     let response = await fetch(url);
     let responseJson = await response.json();
     let data = responseJson.data;
     console.log(data);
-    data.forEach(e => {
 
-        searchSuggestions.push(e.images.original.url);
-        usersName.push(e.username);
+    data.forEach(e => {
+        resultado_search.innerHTML += `
+        <div class="resultado_imagenes_busqueda">
+                <img src="${e.images.original.url}"
+                    alt="Fashion Friends GIF by Fia Oruene" class="imagen" corazon_gif="corazon"
+                    id_gif="khExkapMYhpvhO6F0c" usuario_gif="FiaOruene"
+                    titulo_gif="Fashion Friends GIF by Fia Oruene "
+                    url_gif="${e.images.original.url}">
+                <div class="overlay"></div>
+                <div class="usuario">FiaOruene</div>
+                <div class="titulo">Fashion Friends GIF by Fia Oruene</div>
+                <div class="descarga" titulo_gif="Fashion Friends GIF by Fia Oruene "
+                    url_gif="${e.images.original.url}">
+                </div>
+                <div class="corazon" id="corazon" corazon_gif="corazon" id_gif="khExkapMYhpvhO6F0c"
+                    usuario_gif="FiaOruene" titulo_gif="Fashion Friends GIF by Fia Oruene "
+                    url_gif="${e.images.original.url}">
+                </div>
+                <div class="ampliar"  id_gif="khExkapMYhpvhO6F0c" usuario_gif="FiaOruene"
+                    titulo_gif="Fashion Friends GIF by Fia Oruene "
+                    url_gif="${e.images.original.url}">
+                </div>
+                <div class="url"
+                    id_gif="${e.images.original.url}">
+                </div>
+            </div>
+    `
+
     });
-    console.log(usersName);
-    for (let i = 0; i < searchSuggestions.length; i++) {
-        resultados.innerHTML += 
-        `<div class="c-2">
-            <img src="${searchSuggestions[i]}" alt="" id="gifo-slider">
-        </div>`
-        /* `<div id="card">
-            <img src="${searchSuggestions[i]}" frameborder="0" id="iframe" >
-        </div>` */
-    }
-    for (let j = 0; j < usersName.length; j++) {
-       userTitle.innerHTML = `<h1 id="user-title">${usersName[j]}</h1>`;
-       
-        
-    }
-     //console.log(searchSuggestions);
+    //console.log(searchSuggestions);
     //return searchSuggestions;
 };
 
@@ -88,7 +100,7 @@ function select(element) {
     let selectUserData = element.textContent;
     inputBox.value = selectUserData;//pasar los datos de la lista seleccionada por el usuario en el campo de texto
     searchWrapper.classList.remove("active");
-    console.log(selectUserData);//el que escoje
+    //console.log(selectUserData);//el que escoje
     return selectUserData
 };
 function showSuggestions(list) {
@@ -105,17 +117,25 @@ function showSuggestions(list) {
 // Si el usuario presiona cualquier tecla y suelta
 inputBox.onkeyup = (e) => {
     getTitles(e);
+    lupaHidden.style.display = "block";
+    if (e.target.value === "") {
+        lupaHidden.style.display = "none";
+    }
     /* console.log(e.target.value); */
 };
 
-searchButton.addEventListener("click",e =>{
+searchButton.addEventListener("click", e => {
     getGifs();
     searchButton.style.display = "none";
     closeButton.style.display = "block";
+    lupaHidden.style.display = "none";
 });
 
+
 closeButton.addEventListener("click", e => {
-    resultados.innerHTML = " ";
+    resultado_search.innerHTML = " ";
     searchButton.style.display = "block";
-    closeButton.style.display = "none"
+    closeButton.style.display = "none";
+    lupaHidden.style.display = "none";
 });
+

@@ -14,7 +14,19 @@
     }
 
 }
-
+.search-input #lupa-hidden{
+    width: 55px;
+    height: 55px;
+    line-height: 60px;
+    display:inline-block;
+    position: absolute;
+    top: 1%;
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    color: #9CAFC3;
+    cursor: pointer;
+}
 .search-input input{
     height: 55px;
     width: 100%;
@@ -44,6 +56,7 @@
     overflow-y: auto;
     opacity:0;
     pointer-events: none;//buscar
+    overflow: hidden;
 }
 
 .search-input.active .autocom-box{
@@ -59,6 +72,22 @@
     cursor: default;
     border-radius:3px ;
     display: none;
+}
+.lupa{
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: #9CAFC3 ;
+    text-align: left;
+}
+.imagen-lupa{
+    color: #9CAFC3;
+    display: inline-block;
+    margin-right: 14.6px;
+}
+#imagen-lupa-2{
+    color: #9CAFC3;
+    display: inline-block;
+    margin-right: 14.6px;
 }
 #closeButton{
     display: none;
@@ -95,4 +124,26 @@
     font-size: 20px;
     color: #644bff;
     cursor: pointer;
+}
+#searchButton::before{
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 20px;
+    color: #644bff;
+    cursor: pointer;
+}
+
+#vermashover{
+    display: none;
+}
+
+.resultado_search{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

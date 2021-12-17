@@ -147,20 +147,5 @@
   background-color: rgba(87, 46, 229, 0.9);
 }
 
-#verMas {
-  width: 8.8%;
-  height: 1.3%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-top: 3.1%;
-  display: none;
-}
-
-#verMas img {
-  width: 100%;
-  height: auto;
-}
-
 /*qudo armando la barrabde busqueda bien mela*/
 /*# sourceMappingURL=section_main.css.map */

@@ -9,11 +9,11 @@ async function getWords() {
     let response = await fetch(apikeyTrending);
     let responseJson = await response.json();
     let dat = responseJson.data;
-    console.log(dat);
+   // console.log(dat);
     dat.forEach(element => {
-        titulo = element.title;
+        let titulo = element.title;
         word.innerHTML += titulo + ` , `;
-        console.log(titulo);
+        //console.log(titulo);
     });
     /* writeWords(responseJson) */
 
