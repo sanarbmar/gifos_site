@@ -21,7 +21,7 @@ const $misGifosMenu = document.querySelector('#misGifosMenu');
 const $misGifosSection = document.querySelector('#misGifosSection');
 const $misGifosContainer = document.querySelector('#misGifos-container');
 const $noGifContainer = document.querySelector('#noGif_container');
-
+const resultadob = document.querySelector(".resultado_imagenes_busqueda")
 const $camera = document.querySelector('#camera');
 const $celuloide = document.querySelector('#celuloide');
 
@@ -140,7 +140,7 @@ const uploeadCreatedGif = async () => {
             console.log(myGif.data.id);
             $overlayStatusIcon.src = 'img/check.svg';
             $overlayStatusText.innerHTML = 'GIFO subido con éxito';
-
+            $buttonFinalizar.display= "block";
             let buttonsMyGif = document.createElement('div');
             buttonsMyGif.classList.add('overlay__buttons');
             buttonsMyGif.innerHTML = `<div class="btns downloadOverlay" onclick="downloadCreatedGif('${myGifoId}')"></div> 
@@ -150,7 +150,7 @@ const uploeadCreatedGif = async () => {
             arrMyGifos.push(myGifoId);
             console.log(arrMyGifos);
 
-            myGifos = localStorage.setItem('MyGifs', JSON.stringify(arrMyGifos));
+            let myGifos = localStorage.setItem('MyGifs', JSON.stringify(arrMyGifos));
             console.log(myGifos);
         })
         .catch((err) => {
@@ -163,8 +163,8 @@ const uploeadCreatedGif = async () => {
 const displayMisGifosSection = (event) => {
     event.preventDefault();
     $misGifosSection.classList.remove('hidden');
-   
-    
+
+
     $createGifSection.classList.add('hidden');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     displayMiGifos();
@@ -198,23 +198,35 @@ const displayMiGifos = () => {
                     console.log(typeof misGifosGiphy.data[0].id);
 
                     const gifContainer = document.createElement('div');
-                    gifContainer.classList.add('gif__container');
+                    gifContainer.classList.add('resultado_imagenes_busqueda');
                     gifContainer.innerHTML = `
-					<img class="gif" src="${misGifosGiphy.data[0].images.original.url}" alt="Gif Creado por el usuario">
-
-					<div class="gifActions">
-						<div class="gifActions__btn">
-							<div class="btn remove" onclick="removeMyGifos('${misGifosGiphy.data[0].id}')"></div>
-							<div class="btn download" onclick="downloadGif('${misGifosGiphy.data[0].images.original.url}','Gif')"></div>
-							<div class="btn maximize" onclick="maximizeFavoriteGif('${misGifosGiphy.data[0].images.original.url}','User','Gif')"></div>
-						</div>
-						<div class="gif__info">
-							<p class="gif_user">User</p>
-							<p class="gif_title">Gif</p>
-						</div>
-					</div>
+				
+                <img src="${misGifosGiphy.data[0].images.original.url}"
+                    alt="Fashion Friends GIF by Fia Oruene" class="imagen" corazon_gif="corazon"
+                    id_gif="khExkapMYhpvhO6F0c" usuario_gif="FiaOruene"
+                    titulo_gif="Fashion Friends GIF by Fia Oruene "
+                    url_gif="${misGifosGiphy.data[0].images.original.url}">
+                <div class="overlay"></div>
+                <div class="usuario">FiaOruene</div>
+                <div class="titulo">Fashion Friends GIF by Fia Oruene</div>
+                <div class="descarga" titulo_gif="Fashion Friends GIF by Fia Oruene "
+                    url_gif="${misGifosGiphy.data[0].images.original.url}">
+                </div>
+                <div class="corazon" id="corazon" corazon_gif="corazon" id_gif="khExkapMYhpvhO6F0c"
+                    usuario_gif="FiaOruene" titulo_gif="Fashion Friends GIF by Fia Oruene "
+                    url_gif="${misGifosGiphy.data[0].images.original.url}">
+                </div>
+                <div class="ampliar"  id_gif="khExkapMYhpvhO6F0c" usuario_gif="FiaOruene"
+                    titulo_gif="Fashion Friends GIF by Fia Oruene "
+                    url_gif="${misGifosGiphy.data[0].images.original.url}">
+                </div>
+                <div class="url"
+                    id_gif="${misGifosGiphy.data[0].images.original.url}">
+                </div>
+            
 					`;
                     $misGifosContainer.appendChild(gifContainer);
+                    console.log(gifContainer)
                 })
                 .catch((err) => {
                     console.error(err);
@@ -302,3 +314,17 @@ $buttonSubirGif.addEventListener('click', uploeadCreatedGif);
 $misGifosMenu.addEventListener('click', displayMisGifosSection);
 
 $repeatBtn.addEventListener('click', repeatRecordingGif);
+
+/* <img class="gif" src="${misGifosGiphy.data[0].images.original.url}" alt="Gif Creado por el usuario">
+
+					<div class="gifActions">
+						<div class="gifActions__btn">
+							<div class="btn remove" onclick="removeMyGifos('${misGifosGiphy.data[0].id}')"></div>
+							<div class="btn download" onclick="downloadGif('${misGifosGiphy.data[0].images.original.url}','Gif')"></div>
+							<div class="btn maximize" onclick="maximizeFavoriteGif('${misGifosGiphy.data[0].images.original.url}','User','Gif')"></div>
+						</div>
+						<div class="gif__info">
+							<p class="gif_user">User</p>
+							<p class="gif_title">Gif</p>
+						</div>
+					</div> */

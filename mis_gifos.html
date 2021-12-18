@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <!--links -->
+    <!--css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <link rel="stylesheet" href="css/crear.css">
+    <link rel="stylesheet" href="css/section_slider.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/section_main.css">
+    <link rel="stylesheet" href="css/search.css">
+    <!--Fonts-->
+    <link rel="stylesheet" href="fonts/open_sans/OpenSans-bold.woff">
+    <link rel="stylesheet" href="fonts/open_sans/OpenSans-light.woff">
+    <link rel="stylesheet" href="fonts/open_sans/OpenSans-semibold.woff">
+    <link rel="stylesheet" href="fonts/open_sans/OpenSans.woff">
+    <!--logo del title-->
+    <link rel="icon" type="image/svg" href="img/logo-desktop.svg">
+</head>
+
+<body>
+
+    <header class="header-flex">
+        <div id="logo_dk">
+            <a href="index.html"><img src="img/logo-desktop.svg" alt="logo" class="logo-desktop">
+                <img src="img/logo-mobile.svg" alt="logo" class="logo-mobile"></a>
+        </div>
+        <nav class="burguer">
+            <ul class="nav-desktop">
+                <li class="navli-1">
+                    <a href="">MODO NOCTURNO</a>
+                    <span class="linea"></span>
+                </li>
+                <li class="navli-2">
+                    <a href="favoritos.html">FAVORITOS</a>
+                    <span class="linea"></span>
+                </li>
+                <li class="navli-3">
+                    <a class="navbar__link" href="mis_gifos.html" id="misGifosMenu">MIS GIFOS</a>
+                    <span class="linea"></span>
+                </li>
+
+            </ul>
+
+        </nav>
+        <div class="crearg">
+            <a href="crear_gifo.html"><img src="img/button-crear-gifo.svg" alt="Crear gifo" id="crear-gifo">
+                <img src="img/CTA-crear-gifo-hover.svg" alt="Crear gifo" id="crear-gifo-hover"></a>
+        </div>
+
+
+        <div class="menu" id="bdy">
+
+            <nav class="burger-menu">
+                <input class="menu-check" type="checkbox" name="menu-check" value="" id="menu-check">
+                <label class="menu-open" for="menu-check">
+                    <span class="burger1"></span>
+                    <span class="burger2"></span>
+                    <span class="burger3"></span>
+                </label>
+
+                <ul class="menu-options">
+
+                    <li><a href="#">MODO NOCTURNO</a></li>
+                    <li><a href="favoritos.html">FAVORITOS</a></li>
+                    <li><a href="mis_gifos.html" id="misGifosMenu">MIS GIFOS</a></li>
+
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- MIS GIFOS  -->
+    <section class="topContainers" id="misGifosSection">
+
+        <img src="img/icon-mis-gifos.svg" alt="Imagen decorativa">
+        <h2 class="title">Mis GIFOS</h2>
+
+        <section class="empty__container" id="noGif_container">
+            <img class="empty__image" src="img/icon-mis-gifos-sin-contenido.svg" alt="Imagen decorativa">
+            <h3 class="empty__text">¡Anímate a crear tu primer GIFO!</h3>
+        </section>
+        
+        <div class="searchResult">
+            <div class="searchResult__gallery hidden" id="misGifos-container"></div>
+        </div>
+
+    </section>
+    <div class="searchResult">
+        <div class="searchResult__gallery hidden" id="misGifos-container"></div>
+    </div>
+    <!-- CIERRO MIS GIFOS  -->
+
+    <!-- CONTENIDO -->
+    <div class="crearGif hidden" id="createGifSection">
+
+            <div class="crearGif__container">
+    
+                <!-- cámara -->
+                <div class="crearGif__camara">
+                    <img id="camera" src="img/camara.svg" alt="cámara filmadora ilustrativa">
+                    <img class="path" id="path" src="img/element-luz-camara.svg" alt="luz de camara filmadora">
+                </div>
+    
+                <!-- recuadro de grabación -->
+                <div class="crearGif__recordingZone">
+    
+                    <!-- bordes para estilos -->
+                    <div class="corner top--left"></div>
+                    <div class="corner top--right"></div>
+                    <div class="corner bottom--left"></div>
+                    <div class="corner bottom--right"></div>
+    
+    
+                    <!-- recuadro de grabación -->
+                    <div class="crearGif__recordingZone__content">
+    
+                        <!-- !TIENE HIDDEN -->
+                        <h3 class="crearGif__title" id="crearGif_title">Aquí podrás <br> crear tus propios <span
+                                class="aqua-text">GIFOS</span> </h3>
+                        <!-- !TIENE HIDDEN -->
+                        <p class="crearGif__text" id="crearGif_text">¡Crea tu GIFO en solo 3 pasos! <br> (solo necesitas
+                            una
+                            cámara para grabar un video)</p>
+    
+                        <!-- PARA QUE EL VIDEO SE ACOMODE ACA MIENTRAS GRABA -->
+    
+                        <video class="recording_video hidden" src="" id="recording_video"></video>
+    
+                        <!-- VER SI CONVIENE METER EL GIF DESDE ACA O HACER UNA FUNCION DE TEMPLATE -->
+                        <img class="recorded_video hidden" src="" id="recorded_gifo">
+    
+                        <!-- !TIENE HIDDEN -->
+                        <div class="overlay" id="overlay" style="display: none;">
+    
+                            <div class="overlay__status-container" id="overlay-status-container">
+                                <img src="img/loader.svg" class="overlay__status-icon" alt="loading gifo"
+                                    id="overlay_status-icon">
+                                <p class="overlay__status-text" id="overlay_status-text">Estamos subiendo tu GIFO</p>
+                            </div>
+    
+                        </div>
+    
+    
+    
+                    </div>
+                </div>
+                <!-- celuloide -->
+    
+                <div class="crearGif__celluloidFilm">
+                    <img class="celuloide" id="celuloide" src="img/pelicula.svg" alt="celuloide ilustracion">
+                </div>
+    
+            </div>
+    
+            <div class="pagination">
+                <p class="step" id="step-1">1</p>
+                <p class="step" id="step-2">2</p>
+                <p class="step" id="step-3">3</p>
+            </div>
+    
+    
+            <div class="timer">
+                <p class="timer__recorder&nbsp;timer__text hidden" id="timer-recording">00:00:00</p>
+                <a href="" class="timer__repeatShot&nbsp;timer__text hidden" id="repeatShot">REPETIR CAPTURA</a>
+            </div>
+    
+            <!-- linea decorativa -->
+            <hr class="border">
+    
+            <!-- botones -->
+            <div class="button__container">
+                <a class="button" id="button--comenzar">COMENZAR</a>
+                <a class="button" id="button--grabar" style="display: none;">GRABAR</a>
+                <a class="button" id="button--finalizar" style="display: none;">FINALIZAR</a>
+                <a class="button" id="button--subirGif" style="display: none;">SUBIR GIFO</a>
+            </div>
+        </div>
+
+    <!-- Section Slider  -->
+    <div class="modal" id="modal">
+
+        <div class="cerrar_modal" id="cerrar_modal"></div>
+
+        <div class="boton_slider_izquierda" id="boton_ampliar_izquierda"></div>
+        <div class="imagen_ampliada" id="imagen_ampliada"
+            style="background-image: url(&quot;https://media4.giphy.com/media/Z6MGpfugzM5DirHvdA/giphy.gif?cid=d9654f5cnbiusee9vi7xp7kwxnumhd1k323dx8vibqj74zri&amp;rid=giphy.gif&amp;ct=g&quot;); background-repeat: no-repeat; background-size: 100% 100%;">
+        </div>
+        <div class="boton_slider_derecha" id="boton_ampliar_derecha"></div>
+
+        <div class="usuario_modal" id="usuario_modal">leroypatterson</div>
+        <div class="titulo_modal" id="titulo_modal">Smash Bros Goodbye GIF by Leroy Patterson </div>
+        <div class="descarga_modal" id="descarga_modal"
+            url_gif="https://media4.giphy.com/media/Z6MGpfugzM5DirHvdA/giphy.gif?cid=d9654f5cnbiusee9vi7xp7kwxnumhd1k323dx8vibqj74zri&amp;rid=giphy.gif&amp;ct=g"
+            titulo_gif="Smash Bros Goodbye GIF by Leroy Patterson "></div>
+        <div class="corazon" id="corazon_modal" titulo_gif="Smash Bros Goodbye GIF by Leroy Patterson "
+            usuario_gif="leroypatterson" id_gif="Z6MGpfugzM5DirHvdA"
+            url_gif="https://media4.giphy.com/media/Z6MGpfugzM5DirHvdA/giphy.gif?cid=d9654f5cnbiusee9vi7xp7kwxnumhd1k323dx8vibqj74zri&amp;rid=giphy.gif&amp;ct=g">
+        </div>
+
+    </div>
+    <div class="trending_gifos" id="trending_gifos">
+
+        <p class="trending_gifos_texto">Trending GIFOS</p>
+        <p class="mira">Mira los últimos GIFOS de nuestra comunidad.</p>
+
+        <div class="contenedor_gifos">
+
+            <div class="boton_slider_izquierda" id="boton_slider_izquierda">
+
+            </div>
+            <div class="resultado_trending">
+                <div>
+                    <div class="resultado_imagenes">
+                        <img src="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g"
+                            alt="Fashion Friends GIF by Fia Oruene" class="imagen" corazon_gif="corazon"
+                            id_gif="khExkapMYhpvhO6F0c" usuario_gif="FiaOruene"
+                            titulo_gif="Fashion Friends GIF by Fia Oruene "
+                            url_gif="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                        <div class="overlay"></div>
+                        <div class="usuario">FiaOruene</div>
+                        <div class="titulo">Fashion Friends GIF by Fia Oruene</div>
+                        <div class="descarga" titulo_gif="Fashion Friends GIF by Fia Oruene "
+                            url_gif="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                        </div>
+                        <div class="corazon" id="corazon" corazon_gif="corazon" id_gif="khExkapMYhpvhO6F0c"
+                            usuario_gif="FiaOruene" titulo_gif="Fashion Friends GIF by Fia Oruene "
+                            url_gif="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                        </div>
+                        <div class="ampliar" corazon_gif="corazon" id_gif="khExkapMYhpvhO6F0c" usuario_gif="FiaOruene"
+                            titulo_gif="Fashion Friends GIF by Fia Oruene "
+                            url_gif="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                        </div>
+                        <div class="url"
+                            id_gif="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="resultado_imagenes">
+                        <!-- <img src="https://media3.giphy.com/media/xvdgs8BNJ9z0u9bL69/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g"
+                                alt="Happy Summer GIF by Yevbel" class="imagen" corazon_gif="corazon"
+                                id_gif="xvdgs8BNJ9z0u9bL69" usuario_gif="yevbel" titulo_gif="Happy Summer GIF by Yevbel "
+                                url_gif="https://media3.giphy.com/media/xvdgs8BNJ9z0u9bL69/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                            <div class="overlay"></div>
+                            <div class="usuario">yevbel</div>
+                            <div class="titulo">Happy Summer GIF by Yevbel</div>
+                            <div class="descarga" titulo_gif="Happy Summer GIF by Yevbel "
+                                url_gif="https://media3.giphy.com/media/xvdgs8BNJ9z0u9bL69/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                            </div>
+                            <div class="corazon" id="corazon" corazon_gif="corazon" id_gif="xvdgs8BNJ9z0u9bL69"
+                                usuario_gif="yevbel" titulo_gif="Happy Summer GIF by Yevbel "
+                                url_gif="https://media3.giphy.com/media/xvdgs8BNJ9z0u9bL69/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                            </div>
+                            <div class="ampliar" corazon_gif="corazon" id_gif="xvdgs8BNJ9z0u9bL69" usuario_gif="yevbel"
+                                titulo_gif="Happy Summer GIF by Yevbel "
+                                url_gif="https://media3.giphy.com/media/xvdgs8BNJ9z0u9bL69/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                            </div>
+                            <div class="url"
+                                id_gif="https://media3.giphy.com/media/xvdgs8BNJ9z0u9bL69/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                            </div> -->
+                    </div>
+                </div>
+                <div>
+                    <div class="resultado_imagenes">
+                        <!-- <img src="https://media0.giphy.com/media/IvaeULuuswBjN3wDLy/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g"
+                                alt="Butler Bulldogs Dog GIF by Butler University" class="imagen" corazon_gif="corazon"
+                                id_gif="IvaeULuuswBjN3wDLy" usuario_gif="butleruniversity"
+                                titulo_gif="Butler Bulldogs Dog GIF by Butler University "
+                                url_gif="https://media0.giphy.com/media/IvaeULuuswBjN3wDLy/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                            <div class="overlay"></div>
+                            <div class="usuario">butleruniversity</div>
+                            <div class="titulo">Butler Bulldogs Dog GIF by Butler University</div>
+                            <div class="descarga" titulo_gif="Butler Bulldogs Dog GIF by Butler University "
+                                url_gif="https://media0.giphy.com/media/IvaeULuuswBjN3wDLy/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                            </div>
+                            <div class="corazon" id="corazon" corazon_gif="corazon" id_gif="IvaeULuuswBjN3wDLy"
+                                usuario_gif="butleruniversity" titulo_gif="Butler Bulldogs Dog GIF by Butler University "
+                                url_gif="https://media0.giphy.com/media/IvaeULuuswBjN3wDLy/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                            </div>
+                            <div class="ampliar" corazon_gif="corazon" id_gif="IvaeULuuswBjN3wDLy"
+                                usuario_gif="butleruniversity" titulo_gif="Butler Bulldogs Dog GIF by Butler University "
+                                url_gif="https://media0.giphy.com/media/IvaeULuuswBjN3wDLy/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                            </div>
+                            <div class="url"
+                                id_gif="https://media0.giphy.com/media/IvaeULuuswBjN3wDLy/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
+                            </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="boton_slider_derecha" id="boton_slider_derecha"></div>
+
+        </div>
+
+
+    </div>
+    <!--Scripts -->
+
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="js/create.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/tending_functions.js"></script>
+</body>
+
+</html>

@@ -153,7 +153,7 @@ if (botonVerMas) {
 
 		ocultos.forEach(function (item, index) {
 
-			if (index < cantidad) { item.classList.remove('ocultar'); }
+			if (index < 12) { item.classList.remove('ocultar'); }
 
 			if (document.querySelectorAll('.ocultar').length === 0) { botonVerMas.style.display = "none"; }
 
