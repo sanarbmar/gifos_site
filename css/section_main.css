@@ -12,6 +12,14 @@
   margin-top: 5%;
 }
 
+.dark {
+  background-color: #37383C;
+}
+
+.crearHoverImagen {
+  background: url(../img/CTA-crear-gifo-modo-noc.svg);
+}
+
 .emboltura {
   display: -webkit-box;
   display: -ms-flexbox;

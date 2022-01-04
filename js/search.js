@@ -68,21 +68,21 @@ async function getGifs() {
         <div class="resultado_imagenes_busqueda">
                 <img src="${e.images.original.url}"
                     alt="Fashion Friends GIF by Fia Oruene" class="imagen" corazon_gif="corazon"
-                    id_gif="khExkapMYhpvhO6F0c" usuario_gif="FiaOruene"
-                    titulo_gif="Fashion Friends GIF by Fia Oruene "
+                    id_gif="${e.id}" usuario_gif="${e.username}"
+                    titulo_gif="${e.title} "
                     url_gif="${e.images.original.url}">
                 <div class="overlay"></div>
-                <div class="usuario">FiaOruene</div>
-                <div class="titulo">Fashion Friends GIF by Fia Oruene</div>
-                <div class="descarga" titulo_gif="Fashion Friends GIF by Fia Oruene "
+                <div class="usuario">${e.username}</div>
+                <div class="titulo">${e.title}</div>
+                <div class="descarga" titulo_gif="${e.title}"
                     url_gif="${e.images.original.url}">
                 </div>
-                <div class="corazon" id="corazon" corazon_gif="corazon" id_gif="khExkapMYhpvhO6F0c"
-                    usuario_gif="FiaOruene" titulo_gif="Fashion Friends GIF by Fia Oruene "
-                    url_gif="${e.images.original.url}">
+                <div class="corazon" id="corazon" corazon_gif="corazon" id_gif="${e.id}"
+                    usuario_gif="${e.username}" titulo_gif="${e.title}"
+                    url_gif="${e.images.original.url} onclick="agregarFavoritos()">
                 </div>
-                <div class="ampliar"  id_gif="khExkapMYhpvhO6F0c" usuario_gif="FiaOruene"
-                    titulo_gif="Fashion Friends GIF by Fia Oruene "
+                <div class="ampliar" onclick="ampliar()" id_gif="${e.id}" usuario_gif="${e.username}"
+                    titulo_gif="${e.title}"
                     url_gif="${e.images.original.url}">
                 </div>
                 <div class="url"

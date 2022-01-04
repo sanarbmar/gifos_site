@@ -1,0 +1,92 @@
+
+html {
+	--blanco: #ffffff;
+	--negro: #000000;
+	--boton-scroll-derecha-hover:url("../img/button-slider-right-hover.svg");
+	--boton-scroll-izquierda-hover:url("../img/button-slider-left-hover.svg");
+	--color-texto-header-mobile:#FFFFFF;
+	--facebook-hover:url("../img/icon_facebook_hover.svg");
+	--twitter-hover:url("../img/icon_twitter_hover.svg");
+	--instagram-hover:url("../img/icon_instagram_hover.svg");
+	--favoritos-verde:url("../img/icon-favoritos.svg");
+	--gifos-verde:url("../img/icon-mis-gifos.svg");
+	--sin-favoritos:url("../img/icon-fav-sin-contenido.svg");
+	--sin-gifos:url("../img/icon-mis-gifos-sin-contenido.svg");
+	--favoritos:url("../img/icon-fav.svg");
+	--favoritos-hover:url("../img/icon-fav-hover.svg");
+	--favoritos-active:url("../img/icon-fav-active.svg");
+	--descarga:url("../img/icon-download.svg");
+	--link:url("../img/icon-link-normal.svg");
+	--link-hover:url("../img/icon-link-hover.svg");
+	--descarga-hover:url("../img/icon-download-hover.svg");
+	--ampliar:url("../img/icon-max-normal.svg");
+	--ampliar-hover:url("../img/icon-max-hover.svg");
+	--camara:url("../img/camara.svg");
+	--luz-camara:url("../img/element-luz-camara.svg");
+	--cargando:url("./img/loader.svg");
+	--exito:url("./img/check.svg");
+	--pelicula:url("../img/pelicula.svg");
+	--texto-gifos:#50E3C2;
+	
+}
+
+.diurno {
+	--crear:url("../img/button-crear-gifo.svg");
+	--crear-active : url("../img/CTA-crear-gifo-active.svg");
+	--crear-hover:url("../img/CTA-crear-gifo-hover.svg");
+	--menu-hamburguesa:url("../img/burger.svg");
+	--menu-hamburguesa-cerrar:url("../img/close.svg");
+	--logo-mobile:url("../img/logo-mobile.svg");
+	--logo:url("../img/logo-desktop.svg");
+	--header-background-mobile:rgba(87,46,229,0.90);
+	--cabecera-background-mobile:#FFFFFF;
+	--background: #FFFFFF;
+	--background-trending:#F3F5F8;
+	--color-texto:#572EE5;
+	--color-texto-crear:#FFFFFF;
+	--color-linea:#572EE5;
+	--color-texto-pie:#000000;
+	--color-input:#9CAFC3;
+	--borde-input:1px solid #572EE5;
+	--icono-busqueda:url("../img/icon-search.svg");
+	--boton-scroll-derecha:url("../img/button-slider-right.svg");
+	--boton-scroll-izquierda:url("../img/button-slider-left.svg");
+	--facebook:url("../img/icon_facebook.svg");
+	--twitter:url("../img/icon_twitter.svg");
+	--instagram:url("../img/icon_instagram.svg");
+	--ver-mas: url("../img/CTA-ver-mas.svg");
+	--ver-mas-hover: url("../img/CTA-ver-mas-hover.svg");
+	--paso-a-paso :url("../img/paso-a-paso.svg"); 
+	--paso-a-paso-hover :url("../img/paso-a-paso-hover.svg"); 
+	
+}
+
+.nocturno {
+	--crear:url("../img/CTA-crar-gifo-modo-noc.svg");
+	--crear-active : url("../img/CTA-crear-gifo-active-modo-noc.svg");
+	--crear-hover:url("../img/CTA-crear-gifo-hover-modo-noc.svg");
+	--menu-hamburguesa:url("../img/burger-modo-noct.svg");
+	--menu-hamburguesa-cerrar:url("../img/close-modo-noct.svg");
+	--logo-mobile:url("../img/logo-mobile-modo-noct.svg");
+	--logo:url("../img/logo-modo-noc.svg");
+	--header-background-mobile:#000000;
+	--cabecera-background-mobile:#37383C;
+	--background: #37383c;
+	--background-trending:#222326;
+	--color-texto:#FFFFFF;
+	--color-linea:#000000;
+	--color-texto-pie:#FFFFFF;
+	--color-texto-crear:#000000;
+	--color-input:#FFFFFF;
+	--borde-input:1px solid # #FFFFFF;
+	--icono-busqueda:url("../img/icon-search-mod-noc.svg");
+	--boton-scroll-derecha:url("../img/button-slider-right-md-noct.svg");
+	--boton-scroll-izquierda:url("../img/button-slider-left-md-noct.svg");
+	--facebook:url("../img/icon_facebook_noc.svg");
+	--instagram:url("../img/icon_instagram_noc.svg");
+	--twitter:url("../img/icon_twitter_noc.svg");
+	--ver-mas: url("../img/CTA-ver+-modo-noc.svg");
+	--ver-mas-hover: url("../img/CTA-ver+hover-modo-noc.svg");
+	--paso-a-paso :url("../img/paso-a-paso-mod-noc.svg"); 
+	--paso-a-paso-hover :url("../img/paso-a-paso-hover-mod-noc.svg");
+}

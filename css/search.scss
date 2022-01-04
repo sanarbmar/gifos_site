@@ -1,149 +1,93 @@
-.wrapper{
+
+
+
+.contenido {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: #FFFFFF;
+	//flex: 1;
+	//min-height: 632px;
+    //border: 2px solid red;
+}
+.texto_gifos {
+	color: #50E3C2;
+	background-color: var(--background);
+}
+.busqueda {
+	//padding: 10px 10px 10px 60px;
+	background: #FFFFFF;
+	border: 1px solid #572EE5;
+	border-radius: 27px;
+	background-position: 95% 55%;
     width: 551px;
-    margin:  auto;
-    border: 1px solid #572EE5;
-    border-radius: 27px;
-    margin-bottom: 4.8%;
-    .search-input{
-        position: relative;
-        background: #fff;
-        width: 100%;
-        border-radius: 27px;
-        
-        box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
-    }
-
-}
-.search-input #lupa-hidden{
-    width: 55px;
-    height: 55px;
-    line-height: 60px;
-    display:inline-block;
-    position: absolute;
-    top: 1%;
-    display: none;
-    text-align: center;
-    font-size: 20px;
-    color: #9CAFC3;
-    cursor: pointer;
-}
-.search-input input{
-    height: 55px;
-    width: 100%;
-    outline: none;
-    border: none;
-    border-radius: 27px;
-    padding: 0 60px 0 20px;
-    font-size: 18px;
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);//linea despues de busqueda
 }
 
-.search-input .icon{
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    text-align: center;
-    font-size: 20px;
-    color: #644bff;
-    cursor: pointer;
-}
-.search-input .autocom-box{
-    padding: 0px;
-    max-height: 280px;
-    overflow-y: auto;
-    opacity:0;
-    pointer-events: none;//buscar
-    overflow: hidden;
+.input_busqueda {
+	height: 30px;
+	padding-left: 37px;
+	font-size: 16px;
+	color: #9CAFC3;
+	background: var(--icono-busqueda) right no-repeat;
+	background-size: 20px;
+	outline: 0;
+	width: 96%;
+	opacity: 0.5;
+    //border: 2px solid red;
 }
 
-.search-input.active .autocom-box{
-    padding: 10px 8px;
-    opacity:1;
-    pointer-events: auto;//buscar
+.input_busqueda:focus, select:focus {
+	background-position: 1% 55%;
 }
 
-.autocom-box li{
-    list-style: none;
-    padding: 8px 12px;
-    width: 100%;
-    cursor: default;
-    border-radius:3px ;
-    display: none;
+.contenedor_sugerencias {
+	padding-left: 9px;
+	font-size: 16px;
+	color: #9CAFC3;
+	width: 100%;
+	opacity: 0.5;
 }
-.lupa{
-    font-family: Roboto-Regular;
-    font-size: 16px;
-    color: #9CAFC3 ;
-    text-align: left;
-}
-.imagen-lupa{
-    color: #9CAFC3;
-    display: inline-block;
-    margin-right: 14.6px;
-}
-#imagen-lupa-2{
-    color: #9CAFC3;
-    display: inline-block;
-    margin-right: 14.6px;
-}
-#closeButton{
-    display: none;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    text-align: center;
-    font-size: 20px;
-    color: #644bff;
-    cursor: pointer;
-}
-.search-input.active .autocom-box  li{
-    display: block;
+.busqueda, .contenedor_sugerencias {
+    width: 551px;
 }
 
-.autocom-box li:hover{
-    background: #efefef;
-}
-.envol{
-    border: 1px solid red;
-}
-#searchButton::after{
-    display: none;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    text-align: center;
-    font-size: 20px;
-    color: #644bff;
-    cursor: pointer;
-}
-#searchButton::before{
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    text-align: center;
-    font-size: 20px;
-    color: #644bff;
-    cursor: pointer;
+.texto_busqueda {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	color: var(--color-texto);
+	text-align: center;
+	font-size: 35px;
+	//padding-top: 60px;
 }
 
-#vermashover{
-    display: none;
+.contenedor_busqueda,
+.mis_favoritos ,
+.mis_gifos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.resultado_search{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.trending {
+	padding-top: 31px;
+	width: 53%;
+	//margin: auto;
+}
+
+.trending_texto {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	color: #572EE5;
+	text-align: center;
+	line-height: 25px;
+	margin-bottom: -15px;
+}
+.reactions {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	color: #572EE5;
+	text-align: center;
+	line-height: 25px;
 }

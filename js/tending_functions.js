@@ -3,7 +3,7 @@
 --------------------------*/
 const ampliada = document.querySelector('.imagen_ampliada');
 const cerrarModal = document.querySelector('.cerrar_modal');
-const darkmodeButton = document.getElementById("darkMode");
+
 function ampliar(evento){
 	
 	modal.style.display = "flex";
@@ -160,6 +160,9 @@ function mostrarFavoritos() {
 
 
 }
+
+
+
 
 
 if (misFavoritos) {

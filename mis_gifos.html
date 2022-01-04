@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIFOS</title>
-    <!--links -->
-    <!--css -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-
-    <link rel="stylesheet" href="css/crear.css">
-    <link rel="stylesheet" href="css/section_slider.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="stylesheet" href="css/section_main.css">
-    <link rel="stylesheet" href="css/search.css">
-    <!--Fonts-->
-    <link rel="stylesheet" href="fonts/open_sans/OpenSans-bold.woff">
-    <link rel="stylesheet" href="fonts/open_sans/OpenSans-light.woff">
-    <link rel="stylesheet" href="fonts/open_sans/OpenSans-semibold.woff">
-    <link rel="stylesheet" href="fonts/open_sans/OpenSans.woff">
-    <!--logo del title-->
-    <link rel="icon" type="image/svg" href="img/logo-desktop.svg">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GIFOS</title>
+        <!--links -->
+        <!--css -->
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/media-queries.css">
+        <link rel="stylesheet" href="css/section_main.css">
+        <link rel="stylesheet" href="css/section_slider.css">
+        <!--Fonts-->
+        <link rel="stylesheet" href="fonts/open_sans/OpenSans-bold.woff">
+        <link rel="stylesheet" href="fonts/open_sans/OpenSans-light.woff">
+        <link rel="stylesheet" href="fonts/open_sans/OpenSans-semibold.woff">
+        <link rel="stylesheet" href="fonts/open_sans/OpenSans.woff">
+        <!--logo del title-->
+        <link rel="icon" type="image/svg" href="img/logo-desktop.svg">
+    </head>
 
 <body>
 
     <header class="header-flex">
         <div id="logo_dk">
-            <a href="index.html"><img src="img/logo-desktop.svg" alt="logo" class="logo-desktop">
-                <img src="img/logo-mobile.svg" alt="logo" class="logo-mobile"></a>
+            <a href="index.html">
+                <img src="img/logo-desktop.svg" alt="logo" class="logo-desktop">
+                <img src="img/logo-mobile.svg" alt="logo" class="logo-mobile">
+
+                <img src="img/Logo-modo-noc.svg" alt="logo" class="logo-desktop-dark">
+                <img src="img/logo-mobile-modo-noct.svg" alt="logo" class="logo-mobile-dark">
+
+
+            </a>
         </div>
         <nav class="burguer">
             <ul class="nav-desktop">
                 <li class="navli-1">
-                    <a href="">MODO NOCTURNO</a>
+                    <a id="darkMode">MODO NOCTURNO</a>
                     <span class="linea"></span>
                 </li>
                 <li class="navli-2">
@@ -52,8 +57,13 @@
 
         </nav>
         <div class="crearg">
-            <a href="crear_gifo.html"><img src="img/button-crear-gifo.svg" alt="Crear gifo" id="crear-gifo">
-                <img src="img/CTA-crear-gifo-hover.svg" alt="Crear gifo" id="crear-gifo-hover"></a>
+            <a href="crear_gifo.html">
+                <img src="img/button-crear-gifo.svg" alt="Crear gifo" class="crear-gifo crearHoverImagen">
+                <img src="img/CTA-crear-gifo-hover.svg" alt="Crear gifo" class="crear-gifo-hover">
+
+                <!-- <img src="img/CTA-crear-gifo-modo-noc.svg" alt="Crear gifo" id="crear-gifo-n">
+                <img src="img/CTA-crear-gifo-hover-modo-noc.svg" alt="Crear gifo" id="crear-gifo-hover-n"> -->
+            </a>
         </div>
 
 
@@ -69,7 +79,7 @@
 
                 <ul class="menu-options">
 
-                    <li><a href="#">MODO NOCTURNO</a></li>
+                    <li><a href="#" id="darkMode">MODO NOCTURNO</a></li>
                     <li><a href="favoritos.html">FAVORITOS</a></li>
                     <li><a href="mis_gifos.html" id="misGifosMenu">MIS GIFOS</a></li>
 
@@ -311,6 +321,8 @@
     <script src="js/create.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/tending_functions.js"></script>
+    <script src="js/darkmode.js"></script>
+
 </body>
 
 </html>

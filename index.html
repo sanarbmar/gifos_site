@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/media-queries.css">
     <link rel="stylesheet" href="css/section_main.css">
     <link rel="stylesheet" href="css/section_slider.css">
+    <link rel="stylesheet" href="css/crear.css">
     <!--Fonts-->
     <link rel="stylesheet" href="fonts/open_sans/OpenSans-bold.woff">
     <link rel="stylesheet" href="fonts/open_sans/OpenSans-light.woff">
@@ -29,13 +30,20 @@
     <!--<div class="linea-azul"></div>-->
     <header class="header-flex">
         <div id="logo_dk">
-            <a href="index.html"><img src="img/logo-desktop.svg" alt="logo" class="logo-desktop">
-                <img src="img/logo-mobile.svg" alt="logo" class="logo-mobile"></a>
+            <a href="index.html">
+                <img src="img/logo-desktop.svg" alt="logo" class="logo-desktop">
+                <img src="img/logo-mobile.svg" alt="logo" class="logo-mobile">
+
+                <img src="img/Logo-modo-noc.svg" alt="logo" class="logo-desktop-dark">
+                <img src="img/logo-mobile-modo-noct.svg" alt="logo" class="logo-mobile-dark">
+
+
+            </a>
         </div>
         <nav class="burguer">
             <ul class="nav-desktop">
                 <li class="navli-1">
-                    <a href="" id="darkMode" onclick="">MODO NOCTURNO</a>
+                    <a id="darkMode">MODO NOCTURNO</a>
                     <span class="linea"></span>
                 </li>
                 <li class="navli-2">
@@ -51,8 +59,13 @@
 
         </nav>
         <div class="crearg">
-            <a href="crear_gifo.html"><img src="img/button-crear-gifo.svg" alt="Crear gifo" id="crear-gifo">
-                <img src="img/CTA-crear-gifo-hover.svg" alt="Crear gifo" id="crear-gifo-hover"></a>
+            <a href="crear_gifo.html">
+                <img src="img/button-crear-gifo.svg" alt="Crear gifo" class="crear-gifo crearHoverImagen">
+                <img src="img/CTA-crear-gifo-hover.svg" alt="Crear gifo" class="crear-gifo-hover">
+
+                <!-- <img src="img/CTA-crear-gifo-modo-noc.svg" alt="Crear gifo" id="crear-gifo-n">
+                <img src="img/CTA-crear-gifo-hover-modo-noc.svg" alt="Crear gifo" id="crear-gifo-hover-n"> -->
+            </a>
         </div>
 
 
@@ -68,7 +81,7 @@
 
                 <ul class="menu-options">
 
-                    <li><a href="#">MODO NOCTURNO</a></li>
+                    <li><a href="#" id="darkMode">MODO NOCTURNO</a></li>
                     <li><a href="favoritos.html">FAVORITOS</a></li>
                     <li><a href="mis_gifos.html" id="misGifosMenu">MIS GIFOS</a></li>
 
@@ -86,104 +99,63 @@
             <div class="em-1">
                 <span>Inspirate,</span><span>busca,</span><span>guarda y crea</span> <br> <span> los mejores
                 </span><span class="verde">GIFOS</span></span>
-                <!--inspirate,busca,crea.....-->
+                inspirate,busca,crea.....
             </div>
             <div class="em-2">
                 <img src="img/ilustra_header.svg" alt="saludo">
             </div>
         </div>
     </section>
-    <!-- <input placeholder="           Busca GIFOS y Más" type="text" name="search" id="searchInput">
-                <img src="img/icon-search.svg" alt="search" id="lupa"> -->
+    <div class="contenido">
 
-    <div class="wrapper">
-        <div class="search-input">
+        <!-- BUSQUEDA -->
 
-            <input type="text" placeholder="           Busca GIFOS y Más" name="" id="search-input">
-            <div class="autocom-box">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </div>
-            <div class="icon">
-                <i class="fas fa-search" id="searchButton"></i>
-                <i class="fas fa-times" id="closeButton"></i>
-            </div>
-            <div id="lupa-hidden">
-                <i class="fas fa-search" id="imagen-lupa"></i>
-            </div>
+        <div class="busqueda" id="busqueda">
+
+            <input type="search" class="input_busqueda" id="input_busqueda" placeholder="Busca GIFOS y más">
+
+            <div id="contenedor_sugerencias" class="contenedor_sugerencias"></div>
+
         </div>
 
-    </div>
+        <span class="texto_busqueda" id="texto_busqueda"></span>
 
-    <div class="em-4">
-        <h1>Trending:</h1>
-    </div>
-    <div class="em-5">
-        <span id="word"></span>
-    </div>
-    <div id="line"></div>
+        <div id="contenedor_busqueda" class="contenedor_busqueda"></div>
 
-    <div id="palabra">
-        MASCOTAS
-    </div>
+        <!-- VER MAS -->
 
-    <div class="resultado_search">
+        <div class="boton_ver_mas" id="boton_ver_mas"></div>
 
-        <!--  <div class="resultado_imagenes">
-                <img src="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g"
-                    alt="Fashion Friends GIF by Fia Oruene" class="imagen" corazon_gif="corazon"
-                    id_gif="khExkapMYhpvhO6F0c" usuario_gif="FiaOruene"
-                    titulo_gif="Fashion Friends GIF by Fia Oruene "
-                    url_gif="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
-                <div class="overlay"></div>
-                <div class="usuario">FiaOruene</div>
-                <div class="titulo">Fashion Friends GIF by Fia Oruene</div>
-                <div class="descarga" titulo_gif="Fashion Friends GIF by Fia Oruene "
-                    url_gif="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
-                </div>
-                <div class="corazon" id="corazon" corazon_gif="corazon" id_gif="khExkapMYhpvhO6F0c"
-                    usuario_gif="FiaOruene" titulo_gif="Fashion Friends GIF by Fia Oruene "
-                    url_gif="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
-                </div>
-                <div class="ampliar"  id_gif="khExkapMYhpvhO6F0c" usuario_gif="FiaOruene"
-                    titulo_gif="Fashion Friends GIF by Fia Oruene "
-                    url_gif="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
-                </div>
-                <div class="url"
-                    id_gif="https://media0.giphy.com/media/khExkapMYhpvhO6F0c/giphy.gif?cid=d9654f5cprsimzuzm8gy2z8fi07af2wn317vcem92hoqhsbw&amp;rid=giphy.gif&amp;ct=g">
-                </div>
-            </div> -->
+        <!-- MODAL -->
 
+        <div class="modal" id="modal">
 
+            <div class="cerrar_modal" id="cerrar_modal"></div>
 
-    </div>
-    <div class="boton_ver_mas" id="boton_ver_mas"></div>
-    <!--finish section main-->
-    <!-- Section Slider  -->
-    <div class="modal" id="modal">
+            <div class="boton_ampliar_izquierda" id="boton_ampliar_izquierda"></div>
+            <div class="imagen_ampliada" id="imagen_ampliada"></div>
+            <div class="boton_ampliar_derecha" id="boton_ampliar_derecha"></div>
 
-        <div class="cerrar_modal" id="cerrar_modal"></div>
+            <div class="usuario_modal" id="usuario_modal"></div>
+            <div class="titulo_modal" id="titulo_modal"></div>
+            <div class="descarga_modal" id="descarga_modal"></div>
+            <div class="corazon_modal" id="corazon_modal"></div>
 
-        <div class="boton_slider_izquierda" id="boton_ampliar_izquierda"></div>
-        <div class="imagen_ampliada" id="imagen_ampliada"
-            style="background-image: url(&quot;https://media4.giphy.com/media/Z6MGpfugzM5DirHvdA/giphy.gif?cid=d9654f5cnbiusee9vi7xp7kwxnumhd1k323dx8vibqj74zri&amp;rid=giphy.gif&amp;ct=g&quot;); background-repeat: no-repeat; background-size: 100% 100%;">
         </div>
-        <div class="boton_slider_derecha" id="boton_ampliar_derecha"></div>
+        <!-- TRENDING -->
 
-        <div class="usuario_modal" id="usuario_modal">leroypatterson</div>
-        <div class="titulo_modal" id="titulo_modal">Smash Bros Goodbye GIF by Leroy Patterson </div>
-        <div class="descarga_modal" id="descarga_modal"
-            url_gif="https://media4.giphy.com/media/Z6MGpfugzM5DirHvdA/giphy.gif?cid=d9654f5cnbiusee9vi7xp7kwxnumhd1k323dx8vibqj74zri&amp;rid=giphy.gif&amp;ct=g"
-            titulo_gif="Smash Bros Goodbye GIF by Leroy Patterson "></div>
-        <div class="corazon" id="corazon_modal" titulo_gif="Smash Bros Goodbye GIF by Leroy Patterson "
-            usuario_gif="leroypatterson" id_gif="Z6MGpfugzM5DirHvdA"
-            url_gif="https://media4.giphy.com/media/Z6MGpfugzM5DirHvdA/giphy.gif?cid=d9654f5cnbiusee9vi7xp7kwxnumhd1k323dx8vibqj74zri&amp;rid=giphy.gif&amp;ct=g">
+        <div class="trending">
+
+            <p class="trending_texto">Trending:</p>
+            <p class="reactions">Reactions, Entertainment, Sports, Stickers, Artists</p>
+
         </div>
-
     </div>
+    </div>
+
+
+
+
     <div class="trending_gifos" id="trending_gifos">
 
         <p class="trending_gifos_texto">Trending GIFOS</p>
@@ -306,7 +278,8 @@
     <script src="js/slider.js"></script>
     <script src="js/create.js"></script>
     <script src="js/trending.js"></script>
-
+    <script src="js/darkmode.js"></script>
+    <script src="js/busqueda.js"></script>
 
 
 

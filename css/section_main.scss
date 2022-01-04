@@ -4,6 +4,14 @@
     justify-content: center;
     margin-top: 5%;
 }
+.dark{
+   //display: none;
+   background-color: #37383C;
+}
+
+.crearHoverImagen{
+    background: url(../img/CTA-crear-gifo-modo-noc.svg);
+  }
 .emboltura{
     display: flex;
     flex-direction: column;
