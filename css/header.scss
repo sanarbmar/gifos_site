@@ -1,191 +1,101 @@
-.menu{
-    display: none;
+.header {
+	width: 100%;
+	background: #FFFFFF;
+  margin-top: 1.5%;
 }
-.burger-menu {
-    margin: 3px 40px 0 80px;
-  
-    .menu-check {
-        display:none;
-    }
-  
-    .menu-open {
-      
-      padding: 30px 40px;
-      border-radius: 100%; 
-      position:relative;
-      
-      cursor:pointer;
-      z-index:1;
-      
-      span {
-        $width:40px;
-        $height:3px;
-        width:$width;
-        height:$height;
-        position:absolute;
-        top:50%;
-        left: 50%;
-        margin-top:-$height/2;
-        margin-left:-$width/2;
-        background-color:rgba(87,46,229,0.90);
-        font-weight: bold;
-        opacity:1;
-        transition: 0.3s;
-        
-        &.burger1 {
-          transform: translate3d(0px, -10px, 0px);
-        }
-        
-        &.burger2 {
-          transform: translate3d(0px, 0px, 0px);
-          transition: 0.1s;
-        }
-        
-        &.burger3 {
-          transform: translate3d(0px, 10px, 0px);
-        }
-      }
-    }
-    .menu-check:checked+.menu-open {
-      span {
-        background-color:rgba(87,46,229,0.90);
-        
-        &.burger1 {
-          transform: translateY(-1px) rotate(45deg);
-          width: 30px;
-        }
-        
-        &.burger2 {
-          opacity:0;
-        }
-        
-        &.burger3 {
-          transform: translateY(0px) rotate(-48deg);
-          width: 30px;
-        }
-      }
-    }
+.cabecera {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.menu_hamburguesa {
+	width: 38px;
+	margin: 30px 0 0 100px;
+	background: url(../img/burger.svg) no-repeat;
+}
+.input_busqueda::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+	background: url(../img/close.svg) right no-repeat;
+	width: 16px;
+	height: 16px;
+}
+.cerrar_modal{	
+	position:absolute;  
+	background: url(../img/close.svg) no-repeat;
+  background-size: 100%;
+	width:20px;
+	height:20px;
+	left: 82%;
+	top: 10%;
+}
+/*<--------------------- DISPOSITIVOS INTERMEDIOS --------------------->*/
 
-    .menu-options {
-      background-color: rgba(87,46,229,0.90);
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      width: 0;
-      top: 16%;
-      left: 0;
-      height: 30%;
-      padding: 100px 0px 50px;
-      opacity:0;
-      transition:0.3s;
-      
-      li {
-        color: #fff;
-        text-align: center;
-        list-style: none;
-        display: block;
-        font-weight: normal;
-        
-        a {
-          text-decoration: none;
-          color: #fff;
-          line-height: 4em;
-          display: block;
-          transition:0.5s;
-          
-          &:hover {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 16px;
-            letter-spacing: 0;
-            text-decoration-line: underline;
-            text-decoration-color: #00F3BB;
-          }
-        }
-        
-      
-      }
-    }
-  
-    .menu-check:checked ~ .menu-options {
-      width:100%;
-      opacity:1;
-    }
+@media screen and (min-width: 768px) {
+  .menu_hamburguesa {
+		display: none;
+	}
+	
+	.menu {
+		position: relative;
+		width:100%
+	}
+  .header {
+		display: flex;
+		justify-content: space-around;
+		background-color: #FFFFFF;
+		color: #572EE5;
+	}
+	
+	.header ul {
+		list-style: none;
+		display: block;
+		overflow: unset;
+		background-color: #FFFFFF;
+		color: #572EE5;
+	}
+	
+	nav {
+		height: 44px;
+		margin-top: 10px;
+	}
+	
+	.logo {
+		width: 36px;
+		height: 36px;
+		background: url(../img/logo-desktop.svg) no-repeat;
+    cursor: pointer;
+	}
+	
+	.header ul a {
+		padding-top: 5px;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+	
+	.header li {
+		float: left;
+	}
+	
+	.header li a {
+		font-family: "Montserrat";
+		color: #572EE5;
+		font-size: 13px;
+		letter-spacing: 0;
+		font-weight: 700;
+		text-align: center;
+	}
+	
+	.logo {
+		width: 68px;
+		height: 60px;
+	}
+	
+	.crear, 
+	.crearActivo{
+		display: block;
+		margin-top: -20px;
+		background: url(../img/button-crear-gifo.svg) no-repeat;
+		width: 54px;
+		height: 54px;
+	}
 }
-
-
-.header-flex{
-    width: 100%;
-    height: 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 5px solid #572EE5;
-}
-.burguer{
-    display: flex;
-}
-ul{
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    
-    li{
-        list-style: none;
-        list-style-type: none; 
-        cursor: pointer;
-        a{
-            text-decoration: none;
-            font-family: Montserrat-Bold,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 1rem;
-            color: #572EE5;
-            letter-spacing: 0;
-            text-align: center;
-            font-weight: bold;
-            margin-right: 25px;
-
-            body.dark & {
-              background: #fff;
-            }
-        }
-      }
-}
-
-#logo_dk{
-   margin-right: 30%;
-    margin-top: 0.8%;
-    margin-left: 10.8%;
-    img{
-        width: 100%;
-        height: auto;
-    }
-}
-.logo-mobile, .logo-desktop-dark, .logo-mobile-dark{
-    display: none;
-}
-.crearg{
-    margin: 1.5% 10.8% 1.2% 4.1%;
-  
-}
-
-.nav-desktop li a:hover{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    letter-spacing: 0;
-    text-decoration-line: underline;
-    text-decoration-color: #00F3BB;
-    
-}
-.crear-gifo-hover, #crear-gifo-n, #crear-gifo-hover-n{
-    display: none;
-}
-.crearg:hover{
-    .crear-gifo-hover{
-        display: block;
-    }
-    .crear-gifo{
-        display: none;
-    }
-   
-    
-}
-

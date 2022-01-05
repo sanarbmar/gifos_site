@@ -1,320 +1,253 @@
-.crearGif {
-  position: relative;
-}
-
-@media screen and (min-width: 1280px) {
-  .crearGif {
-    padding-top: 10%;
-  }
-}
-
-@media screen and (min-width: 1530px) {
-  .crearGif {
-    padding-top: 9%;
-  }
-}
-
-.crearGif__container {
+.creacion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 45px;
+  width: 688px;
+  height: 390px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 1.5px solid #572EE5;
 }
 
-.crearGif__camara {
-  max-width: 25%;
-  position: relative;
-}
-
-.crearGif__camara .path {
-  position: relative;
-  top: -1rem;
-}
-
-.crearGif__celluloidFilm {
-  max-width: 25%;
-  height: 20rem;
-  padding-top: 18rem;
-  padding-left: 1.5rem;
-}
-
-.crearGif__recordingZone {
-  padding: 2rem;
-  width: 50%;
-  height: 20rem;
-  border: 1px solid #572ee5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-
-body.darkMode .crearGif__recordingZone {
-  border: 1px solid #fff;
-}
-
-.crearGif__title {
-  font-family: "Montserrat", sans-serif;
-}
-
-.crearGif__text {
-  padding-top: 10px;
-  color: #000;
-}
-
-body.darkMode .crearGif__text {
-  color: #fff;
-}
-
-.crearGif .recording_video {
-  min-width: 80%;
-  min-height: 20rem;
-  max-width: 80%;
-  max-height: 20rem;
-  z-index: 3000;
-}
-
-.crearGif .recorded_video {
-  width: 100%;
-  z-index: 3000;
-}
-
-.crearGif .overlay {
-  width: 100%;
-  height: 100%;
+.camara {
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(87, 46, 229, 0.6);
-  color: #fff;
-  z-index: 90;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background: url(../img/camara.svg) no-repeat;
+  background-size: 100%;
+  width: 123px;
+  height: 163px;
+  left: 8%;
+  top: 28%;
 }
 
-.crearGif .overlay__status-icon {
-  margin: 0.8rem;
-}
-
-.crearGif .overlaystatus-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.crearGif .pagination {
-  margin: 0 auto;
-  width: 75%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  justify-self: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-}
-
-.crearGif .pagination .step {
-  width: 2rem;
-  height: 2rem;
-  padding-top: 0.2em;
-  margin: 1.5rem 0.5rem 1.5rem 0.5rem;
-  border: 1px solid #572ee5;
-  border-radius: 50%;
-  font-size: 1.2em;
-}
-
-body.darkMode .crearGif .pagination .step {
-  border: 1px solid #fff;
-}
-
-.crearGif .pagination .step-active {
-  background-color: #572ee5;
-  color: #fff;
-}
-
-.crearGif #repeatShot {
-  color: #572ee5;
-  text-decoration: none;
-}
-
-.crearGif #repeatShot:hover {
-  border-bottom: 2px solid #50e3c2;
-}
-
-.crearGif #repeatShot:active {
-  color: #9cafc3;
-  border-bottom: hidden;
-}
-
-.crearGif .timer {
-  width: 25%;
-  text-align: right;
-  position: absolute;
-  top: 79%;
-  right: 24%;
-}
-
-.crearGif .timer .timer__text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.crearGif .overlay__buttons {
-  width: 6.8rem;
-  padding: 2%;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  top: 0;
-  right: 0;
-}
-
-.crearGif .overlay__buttons .btns {
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
-}
-
-.crearGif .corner {
-  width: 1.7rem;
-  height: 1.7rem;
-  position: absolute;
-}
-
-.crearGif .top--left {
-  border-top: 1px solid #50e3c2;
-  border-left: 1px solid #50e3c2;
-  top: 1.25rem;
-  left: 1.25rem;
-}
-
-.crearGif .top--right {
-  border-top: 1px solid #50e3c2;
-  border-right: 1px solid #50e3c2;
-  top: 1.25rem;
-  right: 1.25rem;
-}
-
-.crearGif .bottom--right {
-  border-bottom: 1px solid #50e3c2;
-  border-right: 1px solid #50e3c2;
-  bottom: 1.25rem;
-  right: 1.25rem;
-}
-
-.crearGif .bottom--left {
-  border-bottom: 1px solid #50e3c2;
-  border-left: 1px solid #50e3c2;
-  bottom: 1.25rem;
-  left: 1.25rem;
-}
-
-.crearGif .border {
-  width: 58%;
-  margin: 0 auto;
-  border: 2px solid #572ee5;
-}
-
-.button {
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 1rem auto;
-  border: 1.8px solid #572ee5;
-  border-radius: 2rem;
-  padding: 1.2rem 1.3rem;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  font-weight: 500;
-  font-size: 13px;
-  color: #572ee5;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #572ee5;
-  color: #fff;
-}
-
-.hidden {
+.luz_camara {
   display: none;
+  position: absolute;
+  background: url(../img/element-luz-camara.svg) no-repeat;
+  background-size: 100%;
+  width: 91px;
+  height: 151px;
+  left: 17%;
+  top: 29%;
+  -webkit-animation-name: parpadeo;
+          animation-name: parpadeo;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
-.topContainers {
-  padding-top: 5%;
+.pelicula {
+  position: absolute;
+  background: url(../img/pelicula.svg) no-repeat;
+  background-size: 100%;
+  width: 123px;
+  height: 163px;
+  left: 80%;
+  top: 68%;
+}
+
+.paso_a_paso,
+.estado {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+  padding-left: 8%;
+}
+
+.uno,
+.dos,
+.tres {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  color: #572EE5;
+  background: #FFFFFF;
+  border: 1.5px solid #572EE5;
+}
+
+.linea_crear {
+  margin-top: 30px;
+  background: #572EE5;
+  width: 55%;
+  height: 7px;
+}
+
+.boton_crear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  border-radius: 25px;
+  color: #572EE5;
+  width: 127px;
+  height: 50px;
+  font-weight: 700;
+  font-family: "Montserrat";
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.boton_crear:hover {
+  border: 1px solid #572EE5;
+  color: #FFFFFF;
+  background: #572EE5;
+}
+
+.texto_crear {
+  font-family: "Montserrat";
+  color: #572EE5;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  line-height: 35px;
+  width: 60%;
+  margin: auto;
 }
 
-@media screen and (min-width: 400px) {
-  .topContainers {
-    padding-top: 5%;
-  }
+.texto_crear h3 {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  line-height: 29px;
 }
 
-@media screen and (min-width: 1024px) {
-  .topContainers {
-    padding-top: 5%;
-  }
+.contenedor_video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media screen and (min-width: 1530px) {
-  .topContainers {
-    padding-top: 5%;
-  }
+.video {
+  display: none;
+  margin: auto;
+}
+
+video,
+.previsualizar {
+  position: absolute;
+  width: 480px;
+  height: 320px;
+}
+
+.reloj {
+  padding: 35px 0 0 100px;
+  font-family: "Montserrat";
+  font-size: 15px;
+  color: #572EE5;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.overlay_previsualizar {
+  display: none;
+  width: 480px;
+  height: 320px;
+  position: absolute;
+  background: #572EE5;
+  opacity: 0.6;
+  z-index: 2;
+  margin: auto;
+  color: #FFFFFF;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 15px;
+  background-image: url(../img/loader.svg);
+}
+
+.gifos, .icono_gifos, .sin_gifos, .texto_sin_gifos {
+  margin-left: auto;
+  margin-right: auto;
+  color: #572EE5;
+}
+
+.icono_gifos {
+  background: url(../img/icon-mis-gifos.svg) no-repeat;
+  width: 28px;
+  height: 21px;
+}
+
+.texto_gifos,
+.texto_favoritos {
+  font-weight: 600;
+  font-family: "Montserrat";
+  font-size: 25px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+}
+
+.sin_gifos {
+  margin-top: 110px;
+  background: url(../img/icon-mis-gifos-sin-contenido.svg) no-repeat;
+  width: 150px;
+  height: 151px;
+}
+
+.texto_sin_gifos {
+  font-family: "Montserrat";
+  font-size: 22px;
+  color: #50E3C2;
+  text-align: center;
+  line-height: 33px;
+  font-weight: 700;
+  width: 70%;
+  margin-bottom: 137px;
+}
+
+.mis_gifos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=crear.css.map */

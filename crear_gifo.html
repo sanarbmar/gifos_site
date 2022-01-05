@@ -28,167 +28,80 @@
 <body>
     <!-- start header quedo arreglando detalles en el js de crear  -->
     <!--<div class="linea-azul"></div>-->
-    <header class="header-flex">
-        <div id="logo_dk">
-            <a href="index.html">
-                <img src="img/logo-desktop.svg" alt="logo" class="logo-desktop">
-                <img src="img/logo-mobile.svg" alt="logo" class="logo-mobile">
-
-                <img src="img/Logo-modo-noc.svg" alt="logo" class="logo-desktop-dark">
-                <img src="img/logo-mobile-modo-noct.svg" alt="logo" class="logo-mobile-dark">
-
-
-            </a>
+    <header class="header" id="header">
+			
+        <div class="cabecera">
+            
+            <a href="index.html"><div class="logo" id="logo"></div></a>
+            <div class="menu_hamburguesa" id="menu_hamburguesa"></div>
+            
         </div>
-        <nav class="burguer">
-            <ul class="nav-desktop">
-                <li class="navli-1">
-                    <a id="darkMode">MODO NOCTURNO</a>
-                    <span class="linea"></span>
-                </li>
-                <li class="navli-2">
-                    <a href="favoritos.html">FAVORITOS</a>
-                    <span class="linea"></span>
-                </li>
-                <li class="navli-3">
-                    <a class="navbar__link" href="mis_gifos.html" id="misGifosMenu">MIS GIFOS</a>
-                    <span class="linea"></span>
-                </li>
-
+        
+        <nav>
+            
+            <ul class="menu" id="menu">
+                <li><a id="modo" href="#"><span id="nombreModo">Modo Nocturno</span></a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+                <li><a href="mis_gifos.html">Mis GIFOS</a></li>
+                <li><a href="crear_gifo.html"><div class="crear crearActivo" id="crear"></div></a></li>
             </ul>
-
+            
         </nav>
-        <div class="crearg">
-            <a href="crear_gifo.html">
-                <img src="img/button-crear-gifo.svg" alt="Crear gifo" class="crear-gifo crearHoverImagen">
-                <img src="img/CTA-crear-gifo-hover.svg" alt="Crear gifo" class="crear-gifo-hover">
-
-                <!-- <img src="img/CTA-crear-gifo-modo-noc.svg" alt="Crear gifo" id="crear-gifo-n">
-                <img src="img/CTA-crear-gifo-hover-modo-noc.svg" alt="Crear gifo" id="crear-gifo-hover-n"> -->
-            </a>
-        </div>
-
-
-        <div class="menu" id="bdy">
-
-            <nav class="burger-menu">
-                <input class="menu-check" type="checkbox" name="menu-check" value="" id="menu-check">
-                <label class="menu-open" for="menu-check">
-                    <span class="burger1"></span>
-                    <span class="burger2"></span>
-                    <span class="burger3"></span>
-                </label>
-
-                <ul class="menu-options">
-
-                    <li><a href="#" id="darkMode">MODO NOCTURNO</a></li>
-                    <li><a href="favoritos.html">FAVORITOS</a></li>
-                    <li><a href="mis_gifos.html" id="misGifosMenu">MIS GIFOS</a></li>
-
-
-                </ul>
-            </nav>
-
-        </div>
-
+        
     </header>
     <!--finish header -->
-    <!-- Section Main contains : 1 div emboltura (flex),5 divs childs -->
-    <section class="topContainers" id="misGifosSection">
-            <section class="empty__container" id="noGif_container">
-                    
-                </section>
-            <div class="searchResult">
-                    <div class="searchResult__gallery hidden" id="misGifos-container"></div>
-                </div>
-    </section>
     <!-- CONTENIDO -->
-    <div class="crearGif" id="createGifSection">
-
-        <div class="crearGif__container">
-
-            <!-- cámara -->
-            <div class="crearGif__camara">
-                <img id="camera" src="img/camara.svg" alt="cámara filmadora ilustrativa">
-                <img class="path" id="path" src="img/element-luz-camara.svg" alt="luz de camara filmadora">
-            </div>
-
-            <!-- recuadro de grabación -->
-            <div class="crearGif__recordingZone">
-
-                <!-- bordes para estilos -->
-                <div class="corner top--left"></div>
-                <div class="corner top--right"></div>
-                <div class="corner bottom--left"></div>
-                <div class="corner bottom--right"></div>
-
-
-                <!-- recuadro de grabación -->
-                <div class="crearGif__recordingZone__content">
-
-                    <!-- !TIENE HIDDEN -->
-                    <h3 class="crearGif__title" id="crearGif_title">Aquí podrás <br> crear tus propios <span
-                            class="aqua-text">GIFOS</span> </h3>
-                    <!-- !TIENE HIDDEN -->
-                    <p class="crearGif__text" id="crearGif_text">¡Crea tu GIFO en solo 3 pasos! <br> (solo necesitas
-                        una
-                        cámara para grabar un video)</p>
-
-                    <!-- PARA QUE EL VIDEO SE ACOMODE ACA MIENTRAS GRABA -->
-
-                    <video class="recording_video hidden" src="" id="recording_video"></video>
-
-                    <!-- VER SI CONVIENE METER EL GIF DESDE ACA O HACER UNA FUNCION DE TEMPLATE -->
-                    <img class="recorded_video hidden" src="" id="recorded_gifo">
-
-                    <!-- !TIENE HIDDEN -->
-                    <div class="overlay" id="overlay" style="display: none;">
-
-                        <div class="overlay__status-container" id="overlay-status-container">
-                            <img src="img/loader.svg" class="overlay__status-icon" alt="loading gifo"
-                                id="overlay_status-icon">
-                            <p class="overlay__status-text" id="overlay_status-text">Estamos subiendo tu GIFO</p>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-            </div>
-            <!-- celuloide -->
-
-            <div class="crearGif__celluloidFilm">
-                <img class="celuloide" id="celuloide" src="img/pelicula.svg" alt="celuloide ilustracion">
-            </div>
+		
+		<div class="contenido">
+			
+			
+			
+			<!-- CREACION -->
+			
+			<div class="creacion" id="creacion">
+				
+				<div class="camara" id="camara"></div>
+				<div class="luz_camara" id="luz_camara"></div>
+				<div class="contenedor_video" id="contenedor_video">
+					
+					<div class="overlay_previsualizar" id="overlay_previsualizar">Estamos subiendo tu GIFO</div>
+					<div class="descarga" ></div>
+					<div class="link" ></div>
+					<video class="video"></video>
+					<img src="#" class="previsualizar ocultar" id="previsualizar" alt="previsualizar"/>
+					<div class="texto_crear">
+						
+						<h1 class="h1_crear">Aquí podrás crear tus propios <span class="texto_gifos_verde"> GIFOS</span> </h1>
+						<h3 class="h3_crear">¡Crea tu GIFO en sólo 3 pasos! <br>(sólo necesitas una cámara para grabar un video)</h3>
+						
+					</div>
+					
+					
+				</div>
+				<div class="pelicula" id="pelicula"></div>
+				
+			</div> 
+			
+			<!-- PASO A PASO -->
+			
+			<div class="paso_a_paso" id="paso_a_paso">
+				
+				
+				<div class="estado" id="estado">				
+				<div class="uno" id="uno">1</div>
+				<div class="dos" id="dos">2</div>
+				<div class="tres" id="tres">3</div>
+				</div>
+				
+				<div class="reloj" id="reloj"></div>
+				
+			</div> 
+			
+			<div class="linea_crear" id="linea_crear"></div>
+			
+			<div class="boton_crear" id="boton_crear">COMENZAR</div>
 
         </div>
-
-        <div class="pagination">
-            <p class="step" id="step-1">1</p>
-            <p class="step" id="step-2">2</p>
-            <p class="step" id="step-3">3</p>
-        </div>
-
-
-        <div class="timer">
-            <p class="timer__recorder&nbsp;timer__text hidden" id="timer-recording">00:00:00</p>
-            <a href="" class="timer__repeatShot&nbsp;timer__text hidden" id="repeatShot">REPETIR CAPTURA</a>
-        </div>
-
-        <!-- linea decorativa -->
-        <hr class="border">
-
-        <!-- botones -->
-        <div class="button__container">
-            <a class="button" id="button--comenzar">COMENZAR</a>
-            <a class="button" id="button--grabar" style="display: none;">GRABAR</a>
-            <a class="button" id="button--finalizar" style="display: none;">FINALIZAR</a>
-            <a class="button" id="button--subirGif" style="display: none;">SUBIR GIFO</a>
-        </div>
-    </div>
-
-    <!--finish section main-->
 
 
     <!-- Section Slider  -->
@@ -335,7 +248,7 @@
     <script src="js/slider.js"></script>
     <script src="js/tending_functions.js"></script>
     <script src="js/darkmode.js"></script>
-
+    <script src="js/crear.js"></script>
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/7864fe4603.js" crossorigin="anonymous"></script>
 </body>
