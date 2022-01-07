@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/estilo.css" type="text/css">
+		<link rel="icon" type="image/ico" href="imagenes/favicon.ico">
+		
+		<title>Crear</title>
+		
+	</head>
+	
+	<body id="body" class="body diurno">
+		
+		<!-- CABECERA -->
+		
+		<div class="linea_color"></div>
+		
+		<header class="header" id="header">
+			
+			<div class="cabecera">
+				
+				<div class="logo" id="logo"></div>
+				<div class="menu_hamburguesa" id="menu_hamburguesa"></div>
+				
+			</div>
+			
+			<nav>
+				
+				<ul class="menu" id="menu">
+					<li><a id="modo" href="#"><span id="nombreModo">Modo Nocturno</span></a></li>
+					<li><a href="favoritos.html">Favoritos</a></li>
+					<li><a href="gifos.html">Mis GIFOS</a></li>
+					<li><a href="crear.html"><div class="crear crearActivo" id="crear"></div></a></li>
+				</ul>
+				
+			</nav>
+			
+		</header>
+		
+		<!-- CONTENIDO -->
+		
+		<div class="contenido">
+			
+			
+			
+			<!-- CREACION -->
+			
+			<div class="creacion" id="creacion">
+				
+				<div class="camara" id="camara"></div>
+				<div class="luz_camara" id="luz_camara"></div>
+				<div class="contenedor_video" id="contenedor_video">
+					
+					<div class="overlay_previsualizar" id="overlay_previsualizar">Estamos subiendo tu GIFO</div>
+					<div class="descarga" ></div>
+					<div class="link" ></div>
+					<video class="video"></video>
+					<img src="#" class="previsualizar ocultar" id="previsualizar" alt="previsualizar"/>
+					<div class="texto_crear">
+						
+						<h1 class="h1_crear">Aquí podrás crear tus propios <span class="texto_gifos_verde"> GIFOS</span> </h1>
+						<h3 class="h3_crear">¡Crea tu GIFO en sólo 3 pasos! <br>(sólo necesitas una cámara para grabar un video)</h3>
+						
+					</div>
+					
+					
+				</div>
+				<div class="pelicula" id="pelicula"></div>
+				
+			</div> 
+			
+			<!-- PASO A PASO -->
+			
+			<div class="paso_a_paso" id="paso_a_paso">
+				
+				
+				<div class="estado" id="estado">				
+				<div class="uno" id="uno">1</div>
+				<div class="dos" id="dos">2</div>
+				<div class="tres" id="tres">3</div>
+				</div>
+				
+				<div class="reloj" id="reloj"></div>
+				
+			</div> 
+			
+			<div class="linea_crear" id="linea_crear"></div>
+			
+			<div class="boton_crear" id="boton_crear">COMENZAR</div>
+			
+			<!-- PIE -->
+			
+			<footer class="pie" id="pie">	
+				
+				<p class="compartir">Compartir en:</p>
+				
+				<div class="redes_sociales">
+					
+					<div class="icono_facebook" id="icono_facebook"></div>
+					<div class="icono_twitter" id="icono_twitter"></div>
+					<div class="icono_instagram" id="icono_instagram"></div>
+					
+				</div>
+				
+				<p class="derechos">© GIFOS 2021 All Rights Reserved.</p>
+				
+			</footer>
+			
+			
+			
+		</div>
+		
+		<script src="js/index.js"></script>
+		<script src="js/crear.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js"></script>
+		
+	</body>
+	
+</html>

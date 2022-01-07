@@ -1,7 +1,7 @@
 /* -------------------------
     OBTENGO MIS GIFS
 --------------------------*/
-const contenedorSinGif = document.querySelector('.contenedor_sin_gifos');
+
 arrayMisGifs = [];
 
 if (localStorage.getItem("misGifosLocalStorage") !== null){

@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="css/estilo.css" type="text/css">
 		<link rel="icon" type="image/ico" href="imagenes/favicon.ico">
 		
-		<title>GifOs</title>
+		<title>Mis Gifos</title>
 		
 	</head>
 	
@@ -33,7 +33,7 @@
 				<ul class="menu" id="menu">
 					<li><a id="modo" href="#"><span id="nombreModo">Modo Nocturno</span></a></li>
 					<li><a href="favoritos.html">Favoritos</a></li>
-					<li><a href="gifos.html">Mis GIFOS</a></li>
+					<li><a href="gifos.html" class="active">Mis GIFOS</a></li>
 					<li><a href="crear.html"><div class="crear" id="crear"></div></a></li>
 				</ul>
 				
@@ -45,29 +45,25 @@
 		
 		<div class="contenido">
 			
-			<!-- TEXTO-->
+			<!-- GIFOS -->
 			
-			<div class="texto">
+			<div class="gifos" id="gifos">
 				
-				<h1>Inspírate, busca, guarda, y crea los mejores<span class="texto_gifos_verde"> GIFOS</span></h1>
-				
-			</div>
-			
-			<!-- BUSQUEDA -->
-			
-			<img src="imagenes/ilustra_header.svg" class="ilustracion" alt="ilustracion">    
-			
-			<div class="busqueda" id="busqueda">		
-				
-				<input type="search" class="input_busqueda" id="input_busqueda" placeholder="Busca GIFOS y más">
-				
-				<div id="contenedor_sugerencias" class="contenedor_sugerencias"></div>
+				<div class="icono_gifos"></div>
+				<p class="texto_gifos">Mis GIFOS</p>		   
 				
 			</div>
 			
-			<span class="texto_busqueda" id="texto_busqueda"></span>
+			<div class="contenedor_sin_gifos" id="contenedor_sin_gifos">
+				
+				<div class="sin_gifos"></div>
+				<p class="texto_sin_gifos">"¡Anímate a crear tu primer GIFO!"</p>	
+				
+			</div>
 			
-			<div id="contenedor_busqueda" class="contenedor_busqueda"></div>
+			<!-- MIS GIFOS -->
+			
+			<div class="mis_gifos" id="mis_gifos"></div> 
 			
 			<!-- VER MAS -->
 			
@@ -90,14 +86,6 @@
 				
 			</div> 
 			
-			<!-- TRENDING -->
-			
-			<div class="trending">
-				
-				<p class="trending_texto">Trending:</p>
-				<p class="reactions">Reactions, Entertainment, Sports, Stickers, Artists</p>
-				
-			</div>
 			
 			<!-- TRENDING GIFOS -->
 			
@@ -140,9 +128,9 @@
 		</div>
 		
 		<script src="js/index.js"></script>
-		<script src="js/busqueda.js"></script>
 		<script src="js/favoritos.js"></script>
 		<script src="js/trending.js"></script>
+		<script src="js/mis_gifs.js"></script>
 		
 	</body>
 	

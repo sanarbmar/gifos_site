@@ -1,14 +1,4 @@
-const botonCrear = document.getElementById("boton_crear");
-const luzCamara = document.querySelector('.luz_camara');
-const paso1 = document.querySelector('.uno');
-const paso2 = document.querySelector('.dos');
-const paso3 = document.querySelector('.tres');
-const h1Crear = document.querySelector('.h1_crear');
-const h3Crear = document.querySelector('.h3_crear');
-const video = document.querySelector('.video')
-const grabar = document.querySelector('.grabar')
-const previsualizar = document.querySelector('.previsualizar')
-const overPrevisualizar = document.querySelector('.overlay_previsualizar')
+
 let grabacion = 0 ;
 let grabador;
 let grabando = false;

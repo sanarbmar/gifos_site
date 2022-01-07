@@ -1,9 +1,4 @@
-
-const inputBusqueda = document.querySelector(".input_busqueda");
-const contenedorBusqueda = document.querySelector('.contenedor_busqueda');
-const contenedorSugerencias = document.getElementById('contenedor_sugerencias');
-const textoBusqueda = document.querySelector('.texto_busqueda');
-1/* -------------------------
+/* -------------------------
 	SUGERENCIAS
 --------------------------*/
 
@@ -99,7 +94,7 @@ async function mostrarBusqueda(texto){
 	
 	if ( cantGif == 0 ){
 		
-		textoBusqueda.innerHTML ="Busqueda no Encontrada";
+		textoBusqueda.innerHTML ="Lorem ipsum";
 		const errorImg = document.createElement("img");
 		const errorP = document.createElement("p");
 		errorP.style.fontSize="22px";
